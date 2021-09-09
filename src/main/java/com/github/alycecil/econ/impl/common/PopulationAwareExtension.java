@@ -12,13 +12,11 @@ public abstract class PopulationAwareExtension extends IndustryExtension impleme
     @Override
     public void apply() {
         super.apply();
-        market.addTransientImmigrationModifier(this);
     }
 
     @Override
     public void unapply() {
         super.unapply();
-        market.removeTransientImmigrationModifier(this);
     }
 
     @Override

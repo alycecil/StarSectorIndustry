@@ -2,9 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="73c3e54b-7c7c-4cc8-ba48-7b4829dbf547" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/impl/IndustrialTunnels.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/impl/AuthoritarianRegime.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/impl/LuxCivilianHousing.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/impl/PoliceState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/impl/common/AddsMarket.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/impl/common/SupportInfraGrowsPopulation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Readme.MD" beforeDir="false" afterPath="$PROJECT_DIR$/Readme.MD" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/campaign/industries.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/campaign/industries.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/icons/industry/spaceele.xcf" beforeDir="false" afterPath="$PROJECT_DIR$/graphics/icons/industry/spaceele.xcf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jars/StarSectorIndustry.jar" beforeDir="false" afterPath="$PROJECT_DIR$/jars/StarSectorIndustry.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/impl/CivilianInfra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/impl/CivilianInfra.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/impl/LuxCivilianInfra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/impl/LuxCivilianInfra.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/impl/SpaceElevator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/impl/SpaceElevator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/impl/common/PopulationAwareExtension.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/impl/common/PopulationAwareExtension.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,8 +46,8 @@
   </component>
   <component name="RecentsManager">
     <key name="ExtractSuperBase.RECENT_KEYS">
-      <recent name="com.github.alycecil.econ" />
       <recent name="com.github.alycecil.econ.impl" />
+      <recent name="com.github.alycecil.econ" />
       <recent name="com.github.alycecil.econ.model" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -71,7 +82,7 @@
       <option name="presentableId" value="Default" />
       <updated>1631195130913</updated>
       <workItem from="1631195134862" duration="2762000" />
-      <workItem from="1631197931904" duration="17394000" />
+      <workItem from="1631197931904" duration="25656000" />
     </task>
     <servers />
   </component>

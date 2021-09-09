@@ -1,13 +1,10 @@
 package com.github.alycecil.econ.impl;
 
-import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.campaign.econ.MarketImmigrationModifier;
 import com.fs.starfarer.api.impl.campaign.ids.Commodities;
-import com.fs.starfarer.api.impl.campaign.population.PopulationComposition;
-import com.github.alycecil.econ.impl.common.SupportInfrastructure;
-import com.github.alycecil.econ.util.Incoming;
+import com.github.alycecil.econ.impl.common.SupportInfraGrowsPopulation;
 
-public class SpaceElevator extends SupportInfrastructure implements MarketImmigrationModifier {
+public class SpaceElevator extends SupportInfraGrowsPopulation implements MarketImmigrationModifier {
 
     public static final int DEMAND = 4;
 
@@ -31,7 +28,7 @@ public class SpaceElevator extends SupportInfrastructure implements MarketImmigr
     }
 
     @Override
-    public void modifyIncoming(MarketAPI market, PopulationComposition incoming) {
-        Incoming.modifyIncoming(market, incoming, getModId(), 10 * getEffectiveness(), getDescription());
+    protected int getGrowthRate() {
+        return 10;
     }
 }
