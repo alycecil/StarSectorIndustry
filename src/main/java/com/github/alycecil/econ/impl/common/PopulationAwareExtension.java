@@ -21,6 +21,6 @@ public abstract class PopulationAwareExtension extends IndustryExtension impleme
 
     @Override
     protected void addPostUpkeepSection(TooltipMakerAPI tooltip, IndustryTooltipMode mode) {
-        tooltip.addPara("Population Breakdown: <br>"+market.getPopulation().toString(), 10f);
+        tooltip.addPara("Population Breakdown:\n"+market.getPopulation().toString(), 10f);
     }
 }
