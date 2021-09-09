@@ -1,0 +1,14 @@
+{
+ "id": "alices_mod_industry",
+ "name": "Industrial Grounds",
+ "author": "Alice Tries",
+
+ "version": "0.1",
+ "description": "Creates high cost extensions of existing industries.",
+ "gameVersion": "0.95a-RC15",
+
+ "totalConversion": "false",
+ "utility": "false",
+ "jars":["jars/StarSectorIndustry.jar"],
+
+}

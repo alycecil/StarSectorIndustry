@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="73c3e54b-7c7c-4cc8-ba48-7b4829dbf547" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/IndustryGrounds_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/campaign/industries.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jars/StarSectorIndustry.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/StarSectorIndustry/META-INF/StarSectorIndustry.kotlin_module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/StarSectorIndustry/com/github/alycecil/econ/IndustryExtension.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/StarSectorIndustry/com/github/alycecil/econ/impl/AquacultureExtension.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/StarSectorIndustry/com/github/alycecil/econ/impl/FarmingExtension.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/StarSectorIndustry/com/github/alycecil/econ/impl/FlatFarmingExtension.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/StarSectorIndustry/com/github/alycecil/econ/impl/ScalingFarmingExtension.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/StarSectorIndustry/com/github/alycecil/econ/model/FlatCommodityBonus.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/StarSectorIndustry/com/github/alycecil/econ/model/IndustryBonus.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/StarSectorIndustry/com/github/alycecil/econ/model/PopulationCommodityBonus.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/StarSectorIndustry/com/github/alycecil/econ/model/QuantityCommodityBonus.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/IndustryExtension.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/impl/AquacultureExtension.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/impl/FarmingExtension.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/impl/FlatFarmingExtension.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/impl/ScalingFarmingExtension.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/model/FlatCommodityBonus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/model/IndustryBonus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/model/PopulationCommodityBonus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/model/QuantityCommodityBonus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Supercarrier.iml" beforeDir="false" afterPath="$PROJECT_DIR$/StarSectorIndustry.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Supercarrier_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/csv-plugin.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/alyce.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/kotlinc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/starfarer_api.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/starfarer_api.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/campaign/sim_opponents.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/hullmods/hull_mods.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/hulls/commcomm_support.ship" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/hulls/kite_fighter.ship" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/hulls/kite_fighter_2.ship" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/hulls/module_titan_anticap_aft.ship" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/hulls/module_titan_rear.ship" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/hulls/module_titan_shield.ship" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/hulls/module_titan_shield_xl.ship" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/hulls/onslaught_carrier.ship" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/hulls/onslaught_escort_carrier.ship" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/hulls/ship_data.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/hulls/skins/kite_fighter_d.skin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/hulls/skins/kite_fighter_hegemony.skin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/hulls/skins/kite_fighter_luddic_path.skin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/hulls/skins/kite_fighter_pirates.skin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/hulls/skins/wolf_d_fighter.skin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/hulls/skins/wolf_d_pirates_fighter.skin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/hulls/skins/wolf_hegemony_fighter.skin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/hulls/titan.ship" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/hulls/titan2.ship" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/hulls/titan3.ship" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/hulls/wing_data.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/hulls/wolf_fighter.ship" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/hulls/wolf_wingcommander.ship" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/strings/descriptions.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/variants/commcomm_support_PD.variant" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/variants/commcomm_support_variant.variant" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/variants/kite_fighter_2_Starting.variant" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/variants/kite_fighter_Standard.variant" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/variants/kite_fighter_Starting.variant" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/variants/kite_fighter_Support.variant" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/variants/kite_fighter_hegemony_Interceptor.variant" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/variants/kite_fighter_luddic_path_Raider.variant" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/variants/kite_fighter_luddic_path_Strike.variant" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/variants/kite_fighter_pirates_Raider.variant" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/variants/module_titan_anticap_aft_variant.variant" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/variants/module_titan_rear_variant.variant" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/variants/module_titan_shield_variant.variant" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/variants/module_titan_shield_xl_variant.variant" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/variants/onslaught_carrier_Standard.variant" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/variants/onslaught_escort_carrier_Standard.variant" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/variants/titan2_variant.variant" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/variants/titan3_variant.variant" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/variants/titan_support.variant" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/variants/titan_support_alt.variant" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/variants/titan_variant.variant" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/variants/wolf_commander_PD.variant" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/variants/wolf_d_fighter_Attack.variant" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/variants/wolf_d_fighter_pirates_Attack.variant" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/variants/wolf_fighter_Assault.variant" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/variants/wolf_fighter_CS.variant" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/variants/wolf_fighter_Overdriven.variant" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/variants/wolf_fighter_PD.variant" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/variants/wolf_fighter_Starting.variant" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/variants/wolf_fighter_Strike.variant" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/variants/wolf_hegemony_fighter_Assault.variant" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/variants/wolf_hegemony_fighter_Bomber.variant" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/variants/wolf_hegemony_fighter_CS.variant" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/variants/wolf_hegemony_fighter_PD.variant" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/weapons/alice_siege_tpc.wpn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/weapons/deco_blinker_amber.wpn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/weapons/deco_blinker_red_offcycle.wpn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/weapons/deco_blinker_white.wpn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/weapons/deco_blinker_white_offcycle.wpn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/weapons/oversizedvulcan.wpn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/weapons/volleyoversizedvulcan.wpn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/weapons/weapon_data.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/world/factions/default_ship_roles.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/world/factions/hegemony.faction" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/world/factions/independent.faction" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/world/factions/luddic_church.faction" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/world/factions/luddic_path.faction" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/world/factions/persean_league.faction" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/world/factions/pirates.faction" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/world/factions/tritachyon.faction" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/ships/CommCom.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/ships/CommCom.xcf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/ships/Titan.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/ships/Titan.xcf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/ships/TitanCorvus.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/ships/TitanCorvus.xcf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/ships/TitanCorvusRear.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/ships/TitanCorvusRear.xcf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/ships/onslaught_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/ships/onslaught_2.xcf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/weapons/oversized_vulcan_cannon_hardpoint.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/weapons/oversized_vulcan_cannon_turret.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/weapons/siege.xcf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/weapons/siege_tpc_00.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/weapons/siege_tpc_01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jars/Supercarrier.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jars/production/Supercarrier/com/github/alycecil/hullmods/AliceFighterMod.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jars/production/Supercarrier/com/github/alycecil/hullmods/AliceWingCommanderMod.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jars/production/Supercarrier/com/github/alycecil/hullmods/AutoLoaderLostTech.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jars/production/Supercarrier/com/github/alycecil/hullmods/FighterControl$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jars/production/Supercarrier/com/github/alycecil/hullmods/FighterControl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jars/production/Supercarrier/com/github/alycecil/hullmods/FireControlLostTech.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jars/production/Supercarrier/com/github/alycecil/hullmods/HotResupply.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jars/production/Supercarrier/com/github/alycecil/hullmods/HullTank.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jars/production/Supercarrier/com/github/alycecil/hullmods/LostTech.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jars/production/Supercarrier/com/github/alycecil/hullmods/PDLostTech.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jars/production/Supercarrier/com/github/alycecil/hullmods/SensorDishView.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jars/production/Supercarrier/com/github/alycecil/hullmods/ShieldLostTech.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jars/production/Supercarrier/com/github/alycecil/hullmods/TitanMod.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jars/production/Supercarrier/com/github/alycecil/hullmods/TitanSiegeMod$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jars/production/Supercarrier/com/github/alycecil/hullmods/TitanSiegeMod.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jars/production/Supercarrier/com/github/alycecil/hullmods/WiringLostTech.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jars/production/Supercarrier/com/github/alycecil/hullmods/abstracts/CommonCombatHullmod.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jars/production/Supercarrier/com/github/alycecil/hullmods/abstracts/FighterAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jars/production/Supercarrier/com/github/alycecil/hullmods/data/LostTechData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jars/production/Supercarrier/com/github/alycecil/hullmods/data/TitanLostTechData$Level.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jars/production/Supercarrier/com/github/alycecil/hullmods/data/TitanLostTechData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jars/production/Supercarrier/com/github/alycecil/hullmods/helpers/ShipActions.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jars/production/Supercarrier/com/github/alycecil/hullmods/helpers/StatChanges.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jars/production/Supercarrier/com/github/alycecil/hullmods/helpers/WingAI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mod_info.json" beforeDir="false" afterPath="$PROJECT_DIR$/mod_info.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/alycecil/hullmods/AliceFighterMod.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/alycecil/hullmods/AliceWingCommanderMod.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/alycecil/hullmods/AutoLoaderLostTech.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/alycecil/hullmods/FighterControl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/alycecil/hullmods/FireControlLostTech.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/alycecil/hullmods/HotResupply.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/alycecil/hullmods/HullTank.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/alycecil/hullmods/LostTech.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/alycecil/hullmods/PDLostTech.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/alycecil/hullmods/SensorDishView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/alycecil/hullmods/ShieldLostTech.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/alycecil/hullmods/TitanMod.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/alycecil/hullmods/TitanSiegeMod.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/alycecil/hullmods/WiringLostTech.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/alycecil/hullmods/abstracts/CommonCombatHullmod.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/alycecil/hullmods/abstracts/FighterAction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/alycecil/hullmods/data/LostTechData.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/alycecil/hullmods/data/TitanLostTechData.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/alycecil/hullmods/helpers/ShipActions.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/alycecil/hullmods/helpers/StatChanges.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/alycecil/hullmods/helpers/WingAI.java" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1xuBXHB1m1ZViXJJ2QDY0XgszHi" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.20229885" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="com.github.alycecil.econ" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.github.alycecil.econ.impl" />
+      <recent name="com.github.alycecil.econ.model" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Program Files (x86)\Fractal Softworks\Starsector\mods\StarSectorIndustry" />
+      <recent name="C:\Program Files (x86)\Fractal Softworks\Starsector\mods\StarSectorIndustry\data\campaign" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="73c3e54b-7c7c-4cc8-ba48-7b4829dbf547" name="Default Changelist" comment="" />
+      <created>1631195130913</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1631195130913</updated>
+      <workItem from="1631195134862" duration="2762000" />
+      <workItem from="1631197931904" duration="2234000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
