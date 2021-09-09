@@ -1,11 +1,14 @@
 package com.github.alycecil.econ.impl;
 
+import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Commodities;
+import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.Industries;
-import com.github.alycecil.econ.IndustryExtension;
+import com.fs.starfarer.api.impl.campaign.population.PopulationComposition;
+import com.github.alycecil.econ.PopulationAwareExtension;
 import com.github.alycecil.econ.model.FlatCommodityBonus;
 
-public class AquacultureExtension extends IndustryExtension {
+public class AquacultureExtension extends PopulationAwareExtension {
     public static final String AQUACULTURE = "Aquaculture";
     public static final String DESC = AQUACULTURE + " improvements";
 
@@ -25,5 +28,13 @@ public class AquacultureExtension extends IndustryExtension {
     @Override
     protected String getIndustryFriendlyName() {
         return AQUACULTURE;
+    }
+
+    @Override
+    public void modifyIncoming(MarketAPI market, PopulationComposition incoming) {
+        incoming.add(Factions.LUDDIC_CHURCH, 5f);
+        incoming.add(Factions.LUDDIC_PATH, 1f);
+        incoming.add(Factions.POOR, 7f);
+        incoming.add(Factions.PERSEAN, 7f);
     }
 }

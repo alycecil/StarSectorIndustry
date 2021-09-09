@@ -3,15 +3,15 @@ package com.github.alycecil.econ.model;
 import com.fs.starfarer.api.campaign.econ.Industry;
 import com.fs.starfarer.api.campaign.econ.MutableCommodityQuantity;
 
-public abstract class QuantityCommodityBonus extends QuantityCommodityChange {
+public abstract class QuantityCommodityDemand extends QuantityCommodityChange {
 
 
-    public QuantityCommodityBonus(String commodityId, String desc) {
+    public QuantityCommodityDemand(String commodityId, String desc) {
         super(commodityId, desc);
     }
 
     @Override
     public MutableCommodityQuantity getModifier(Industry industry) {
-        return industry.getSupply(commodityId);
+        return industry.getDemand(commodityId);
     }
 }
