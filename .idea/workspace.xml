@@ -2,21 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="73c3e54b-7c7c-4cc8-ba48-7b4829dbf547" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/PopulationAwareExtension.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/impl/FuelProd.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/impl/SpaceElevator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/impl/TraceMining.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/model/PopulationCommodityDemand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/model/QuantityCommodityChange.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/model/QuantityCommodityDemand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Readme.MD" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/campaign/industries.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/campaign/industries.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jars/StarSectorIndustry.jar" beforeDir="false" afterPath="$PROJECT_DIR$/jars/StarSectorIndustry.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/impl/AquacultureExtension.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/impl/AquacultureExtension.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/impl/FarmingExtension.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/FarmingExtension.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/impl/FlatFarmingExtension.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/impl/FlatFarmingExtension.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/impl/ScalingFarmingExtension.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/impl/ScalingFarmingExtension.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/model/QuantityCommodityBonus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/model/QuantityCommodityBonus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/icons/industry/spaceele.xcf" beforeDir="false" afterPath="$PROJECT_DIR$/graphics/icons/industry/spaceele.xcf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/IndustryExtension.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/IndustryExtension.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/impl/SpaceElevator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/impl/SpaceElevator.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -83,7 +74,7 @@
       <option name="presentableId" value="Default" />
       <updated>1631195130913</updated>
       <workItem from="1631195134862" duration="2762000" />
-      <workItem from="1631197931904" duration="10464000" />
+      <workItem from="1631197931904" duration="12219000" />
     </task>
     <servers />
   </component>

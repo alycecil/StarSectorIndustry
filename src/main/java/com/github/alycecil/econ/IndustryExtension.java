@@ -18,15 +18,23 @@ public abstract class IndustryExtension extends BaseIndustry {
     @Override
     public void apply() {
         if (isFunctional() && bonuses != null) {
-            Industry industry = market.getIndustry(getIndustryId());
+            applyForIndustry();
+
+            for (IndustryBonus bonus : bonuses) {
+                bonus.apply(this, getModId());
+            }
+        }
+    }
+
+    private void applyForIndustry() {
+        String industryId = getIndustryId();
+        if (industryId != null) {
+            Industry industry = market.getIndustry(industryId);
 
             if (industry != null) {
                 for (IndustryBonus bonus : bonuses) {
                     bonus.apply(industry, getModId());
                 }
-            }
-            for (IndustryBonus bonus : bonuses) {
-                bonus.apply(this, getModId());
             }
         }
     }
@@ -39,14 +47,21 @@ public abstract class IndustryExtension extends BaseIndustry {
             bonus.unapply(this, getModId());
         }
 
-        Industry industry = market.getIndustry(getIndustryId());
-        if (industry != null) {
-            for (IndustryBonus bonus : bonuses) {
-                bonus.unapply(industry, getModId());
+        unapplyForIndustry();
+
+
+    }
+
+    private void unapplyForIndustry() {
+        String industryId = getIndustryId();
+        if (industryId != null) {
+            Industry industry = market.getIndustry(industryId);
+            if (industry != null) {
+                for (IndustryBonus bonus : bonuses) {
+                    bonus.unapply(industry, getModId());
+                }
             }
         }
-
-
     }
 
     @Override

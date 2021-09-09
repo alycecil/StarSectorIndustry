@@ -11,31 +11,34 @@ import com.fs.starfarer.api.util.Pair;
 
 public class SpaceElevator extends BaseIndustry  implements MarketImmigrationModifier {
 
-    public static final int DEMAND = 5;
+    public static final int DEMAND = 3;
 
     @Override
     public void apply() {
-        demand(Commodities.HEAVY_MACHINERY, DEMAND);
+        demand(Commodities.HEAVY_MACHINERY, getDemand());
 
         float mult = getEffectiveness();
 
 
         if (isFunctional()) {
-            market.getAccessibilityMod().modifyFlat(id, 0.5f * mult, "Space Elevator");
-        } else if (isDisrupted()) {
-            market.getAccessibilityMod().modifyFlat(id, 0.1f * mult, "Disrupted Space Elevator");
+            market.getAccessibilityMod().modifyFlat(id, .5f * market.getSize() * mult, "Space Elevator");
         }
 
         market.addTransientImmigrationModifier(this);
     }
 
     private float getEffectiveness() {
-        float mult = 1f;
+        float effectiveness = 1f;
         Pair<String, Integer> deficit = getMaxDeficit(Commodities.HEAVY_MACHINERY);
-        if (deficit != null && deficit.two != null) {
-            mult = (DEMAND - deficit.two) / DEMAND;
+        if (deficit != null && deficit.two != null && deficit.two >= 1) {
+            int demand = getDemand();
+            effectiveness = (float)(demand - deficit.two) / demand;
         }
-        return mult;
+        return effectiveness;
+    }
+
+    private int getDemand() {
+        return DEMAND + market.getSize();
     }
 
     @Override
