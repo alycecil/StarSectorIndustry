@@ -1,32 +1,16 @@
-package com.github.alycecil.econ;
+package com.github.alycecil.econ.impl.common;
 
 import com.fs.starfarer.api.campaign.econ.Industry;
-import com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry;
 import com.github.alycecil.econ.model.IndustryBonus;
 
-import java.util.Arrays;
-import java.util.List;
-
-public abstract class IndustryExtension extends BaseIndustry {
-
-    List<IndustryBonus> bonuses;
+public abstract class IndustryExtension extends AliceBaseIndustry {
 
     public IndustryExtension(IndustryBonus... bonuses) {
-        this.bonuses = Arrays.asList(bonuses);
+        super(bonuses);
     }
 
     @Override
-    public void apply() {
-        if (isFunctional() && bonuses != null) {
-            applyForIndustry();
-
-            for (IndustryBonus bonus : bonuses) {
-                bonus.apply(this, getModId());
-            }
-        }
-    }
-
-    private void applyForIndustry() {
+    protected void applyForIndustry() {
         String industryId = getIndustryId();
         if (industryId != null) {
             Industry industry = market.getIndustry(industryId);
@@ -40,19 +24,7 @@ public abstract class IndustryExtension extends BaseIndustry {
     }
 
     @Override
-    public void unapply() {
-        super.unapply();
-
-        for (IndustryBonus bonus : bonuses) {
-            bonus.unapply(this, getModId());
-        }
-
-        unapplyForIndustry();
-
-
-    }
-
-    private void unapplyForIndustry() {
+    protected void unapplyForIndustry() {
         String industryId = getIndustryId();
         if (industryId != null) {
             Industry industry = market.getIndustry(industryId);

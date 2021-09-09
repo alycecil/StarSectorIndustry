@@ -1,4 +1,4 @@
-package com.github.alycecil.econ;
+package com.github.alycecil.econ.impl.common;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.impl.campaign.ids.Conditions;

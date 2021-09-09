@@ -1,8 +1,7 @@
-package com.github.alycecil.econ;
+package com.github.alycecil.econ.impl.common;
 
 import com.fs.starfarer.api.campaign.econ.MarketImmigrationModifier;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
-import com.github.alycecil.econ.IndustryExtension;
 import com.github.alycecil.econ.model.IndustryBonus;
 
 public abstract class PopulationAwareExtension extends IndustryExtension implements MarketImmigrationModifier {

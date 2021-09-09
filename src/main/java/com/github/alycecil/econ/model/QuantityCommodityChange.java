@@ -2,6 +2,7 @@ package com.github.alycecil.econ.model;
 
 import com.fs.starfarer.api.campaign.econ.Industry;
 import com.fs.starfarer.api.campaign.econ.MutableCommodityQuantity;
+import com.fs.starfarer.api.combat.MutableStat;
 
 public abstract class QuantityCommodityChange implements IndustryBonus {
     protected String commodityId;
@@ -14,8 +15,14 @@ public abstract class QuantityCommodityChange implements IndustryBonus {
 
     @Override
     public void apply(Industry industry, String modId) {
+        if (industry == null) return;
         String desc = this.desc + industry.getNameForModifier();
-        getModifier(industry).getQuantity().modifyFlat(modId, getQuantity(industry), desc);
+        MutableCommodityQuantity modifier = getModifier(industry);
+        if (modifier == null) return;
+        MutableStat quantityStat = modifier.getQuantity();
+        if (quantityStat == null) return;
+        int quantityActual = getQuantity(industry);
+        quantityStat.modifyFlat(modId, quantityActual, desc);
     }
 
     public abstract MutableCommodityQuantity getModifier(Industry industry);

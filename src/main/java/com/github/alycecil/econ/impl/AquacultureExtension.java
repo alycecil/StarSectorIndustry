@@ -5,7 +5,7 @@ import com.fs.starfarer.api.impl.campaign.ids.Commodities;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.Industries;
 import com.fs.starfarer.api.impl.campaign.population.PopulationComposition;
-import com.github.alycecil.econ.PopulationAwareExtension;
+import com.github.alycecil.econ.impl.common.PopulationAwareExtension;
 import com.github.alycecil.econ.model.FlatCommodityBonus;
 
 public class AquacultureExtension extends PopulationAwareExtension {
@@ -32,6 +32,7 @@ public class AquacultureExtension extends PopulationAwareExtension {
 
     @Override
     public void modifyIncoming(MarketAPI market, PopulationComposition incoming) {
+        if(incoming == null) return;
         incoming.add(Factions.LUDDIC_CHURCH, 5f);
         incoming.add(Factions.LUDDIC_PATH, 1f);
         incoming.add(Factions.POOR, 7f);
