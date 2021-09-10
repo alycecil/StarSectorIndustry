@@ -10,7 +10,7 @@ import com.github.alycecil.econ.model.PopulationCommodityDemand;
 
 public class JumpDefense extends MilitaryIndustry {
 
-    public static final String JUMP_DEFENSE_FORCE = "Jump Defense Navy";
+    public static final String JUMP_DEFENSE_FORCE = "Gates & Customs Navy";
 
     public JumpDefense() {
         super(0.01f,

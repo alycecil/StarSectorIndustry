@@ -2,17 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="73c3e54b-7c7c-4cc8-ba48-7b4829dbf547" name="Default Changelist" comment="Add Fleet Creators, cleanup and art">
-      <change afterPath="$PROJECT_DIR$/data/campaign/commodities.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/model/ConditionalFlatCommodityBonus.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/campaign/industries.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/campaign/industries.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jars/StarSectorIndustry.jar" beforeDir="false" afterPath="$PROJECT_DIR$/jars/StarSectorIndustry.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/impl/FlatFarmingExtension.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/impl/FlatFarmingExtension.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/impl/IndustrialDefenseForce.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/impl/IndustrialDefenseForce.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/impl/JumpDefense.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/impl/JumpDefense.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/impl/ScalingFarmingExtension.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/impl/ScalingFarmingExtension.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/impl/LuxCivilianHousing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/impl/LuxCivilianHousing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/impl/PoliceState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/impl/PoliceState.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/impl/SelfDefenceForce.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/impl/SelfDefenceForce.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/impl/common/MilitaryIndustry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/impl/common/MilitaryIndustry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/util/AliceCommon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/util/AliceCommon.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -91,7 +87,7 @@
       <updated>1631195130913</updated>
       <workItem from="1631195134862" duration="2762000" />
       <workItem from="1631197931904" duration="46449000" />
-      <workItem from="1631282812389" duration="28188000" />
+      <workItem from="1631282812389" duration="30621000" />
     </task>
     <task id="LOCAL-00001" summary="A decent spot">
       <created>1631230676723</created>

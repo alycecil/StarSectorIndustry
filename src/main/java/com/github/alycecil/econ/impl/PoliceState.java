@@ -12,7 +12,8 @@ public class PoliceState extends SupportInfraGrowsPopulation {
     public PoliceState() {
         super(-0.05f,
                 new PopulationCommodityDemand(Commodities.HAND_WEAPONS, 2, CRIMES_AGAINST_HUMANITY),
-                new PopulationCommodityDemand(Commodities.MARINES, 3, CRIMES_AGAINST_HUMANITY));
+                new PopulationCommodityDemand(Commodities.MARINES, 3, CRIMES_AGAINST_HUMANITY)
+        );
     }
 
     @Override

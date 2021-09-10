@@ -10,6 +10,7 @@ import com.fs.starfarer.api.util.Pair;
 import com.github.alycecil.econ.impl.common.AddsMarket;
 import com.github.alycecil.econ.impl.common.HasEffectiveness;
 import com.github.alycecil.econ.model.PopulationCommodityDemand;
+import com.github.alycecil.econ.util.AliceCommon;
 
 public class LuxCivilianHousing extends AddsMarket implements MarketImmigrationModifier, HasEffectiveness {
 
@@ -19,7 +20,7 @@ public class LuxCivilianHousing extends AddsMarket implements MarketImmigrationM
         super(0.08f,
                 new PopulationCommodityDemand(Commodities.LUXURY_GOODS, -3, DESC),
                 new PopulationCommodityDemand(Commodities.FOOD, -3, DESC),
-                new PopulationCommodityDemand(Commodities.LOBSTER, 0, DESC),
+                new PopulationCommodityDemand(AliceCommon.LOBSTER, 0, DESC),
                 new PopulationCommodityDemand(Commodities.SUPPLIES, 2, DESC),
                 new PopulationCommodityDemand(Commodities.DRUGS, 0, DESC),
                 new PopulationCommodityDemand(Commodities.DOMESTIC_GOODS, 0, DESC),
@@ -69,7 +70,7 @@ public class LuxCivilianHousing extends AddsMarket implements MarketImmigrationM
     protected void applyForIndustry(float effectiveness) {
         super.applyForIndustry(effectiveness);
 
-        Pair<String, Integer> deficit = getMaxDeficit(Commodities.FOOD, Commodities.LOBSTER);
+        Pair<String, Integer> deficit = getMaxDeficit(Commodities.FOOD, AliceCommon.LOBSTER);
         if (deficit.two <= 0) {
             market.getStability().modifyFlat(getModId(0), 1, "Wealthy food demands met");
         } else {
@@ -91,10 +92,10 @@ public class LuxCivilianHousing extends AddsMarket implements MarketImmigrationM
                 Commodities.SUPPLIES
         );
         if (deficit.two <= 0) {
-            market.getStability().modifyFlat(getModId(1), 1, "Wealthy goods demands met");
+            market.getStability().modifyFlat(getModId(2), 1, "Wealthy goods demands met");
         } else {
-            market.getStability().unmodifyFlat(getModId(1));
-            market.getStability().modifyFlat(getModId(1), -1, "Wealthy goods demands not met");
+            market.getStability().unmodifyFlat(getModId(2));
+            market.getStability().modifyFlat(getModId(2), -1, "Wealthy goods demands not met");
         }
 
         deficit = getMaxDeficit(
@@ -105,9 +106,9 @@ public class LuxCivilianHousing extends AddsMarket implements MarketImmigrationM
                 Commodities.ORGANS
         );
         if (deficit.two <= 0) {
-            market.getStability().modifyFlat(getModId(1), 3, "Wealthy citizens sated.");
+            market.getStability().modifyFlat(getModId(3), 3, "Wealthy citizens sated.");
         } else {
-            market.getStability().unmodifyFlat(getModId(1));
+            market.getStability().unmodifyFlat(getModId(3));
         }
 
     }

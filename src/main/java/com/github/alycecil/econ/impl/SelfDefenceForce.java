@@ -10,7 +10,7 @@ import com.github.alycecil.econ.model.PopulationCommodityDemand;
 
 public class SelfDefenceForce extends MilitaryIndustry {
 
-    public static final String NAVAL_SELF_DEFENSE = "Naval Self Defense";
+    public static final String NAVAL_SELF_DEFENSE = "Self Defense Navy";
 
     public SelfDefenceForce() {
         super(0.01f,
