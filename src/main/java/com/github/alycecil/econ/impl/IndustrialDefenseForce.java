@@ -14,6 +14,7 @@ public class IndustrialDefenseForce extends MilitaryIndustry {
 
     public IndustrialDefenseForce() {
         super(0.01f,
+                new PopulationCommodityDemand(Commodities.SHIPS, 2, INDUSTRIAL_DEFENSE_FORCE),
                 new PopulationCommodityDemand(Commodities.FUEL, 1, INDUSTRIAL_DEFENSE_FORCE),
                 new PopulationCommodityDemand(Commodities.CREW, 2, INDUSTRIAL_DEFENSE_FORCE),
                 new PopulationCommodityDemand(Commodities.HAND_WEAPONS, 3, INDUSTRIAL_DEFENSE_FORCE),

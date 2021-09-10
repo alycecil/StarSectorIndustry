@@ -14,6 +14,7 @@ public class SelfDefenceForce extends MilitaryIndustry {
 
     public SelfDefenceForce() {
         super(0.01f,
+                new PopulationCommodityDemand(Commodities.SHIPS, 2, NAVAL_SELF_DEFENSE),
                 new PopulationCommodityDemand(Commodities.FUEL, 2, NAVAL_SELF_DEFENSE),
                 new PopulationCommodityDemand(Commodities.MARINES, 4, NAVAL_SELF_DEFENSE),
                 new PopulationCommodityDemand(Commodities.HAND_WEAPONS, 4, NAVAL_SELF_DEFENSE),

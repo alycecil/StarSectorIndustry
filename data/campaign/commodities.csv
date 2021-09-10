@@ -1,0 +1,2 @@
+name,id,demand class,base price,export value,price variability,utility,origin,tags,stack size,cargo space,icon,sound id,sound id drop,order,economyTier,econUnitOrigUnused,econUnit,baseRaidDanger,eU * base value,iconWidthMult,plugin,desc
+Lobster,lobster_common,lobster_common,50,2500,,1,,"food,luxury, expensive",1000,1,graphics/icons/cargo/lobster.png,ui_cargo_luxury,ui_cargo_luxury_drop,1.1,2.8,200,500,,,1,,

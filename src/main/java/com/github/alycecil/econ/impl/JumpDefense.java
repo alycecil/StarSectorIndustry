@@ -14,6 +14,7 @@ public class JumpDefense extends MilitaryIndustry {
 
     public JumpDefense() {
         super(0.01f,
+                new PopulationCommodityDemand(Commodities.SHIPS, 1, JUMP_DEFENSE_FORCE),
                 new PopulationCommodityDemand(Commodities.FUEL, 4, JUMP_DEFENSE_FORCE),
                 new PopulationCommodityDemand(Commodities.MARINES, 5, JUMP_DEFENSE_FORCE),
                 new PopulationCommodityDemand(Commodities.HAND_WEAPONS, 5, JUMP_DEFENSE_FORCE),

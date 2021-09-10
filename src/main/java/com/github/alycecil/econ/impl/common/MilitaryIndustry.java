@@ -14,7 +14,6 @@ import com.fs.starfarer.api.impl.campaign.fleets.FleetFactory;
 import com.fs.starfarer.api.impl.campaign.fleets.RouteManager;
 import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
 import com.fs.starfarer.api.impl.campaign.ids.Stats;
-import com.fs.starfarer.api.impl.campaign.ids.Submarkets;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.IntervalUtil;
 import com.fs.starfarer.api.util.Misc;
@@ -27,22 +26,12 @@ import java.util.Random;
 import static com.fs.starfarer.api.impl.campaign.econ.impl.MilitaryBase.createPatrol;
 import static com.fs.starfarer.api.impl.campaign.econ.impl.MilitaryBase.getPatrolCombatFP;
 
-public abstract class MilitaryIndustry extends AddsMarket implements RouteManager.RouteFleetSpawner, FleetEventListener {
+public abstract class MilitaryIndustry extends SupportInfraGrowsPopulation implements RouteManager.RouteFleetSpawner, FleetEventListener {
     public MilitaryIndustry(float perMarketSize, IndustryEffect... bonuses) {
         super(perMarketSize, bonuses);
     }
 
     protected float returningPatrolValue = 0f;
-
-    @Override
-    protected String getSubmarket() {
-        return Submarkets.GENERIC_MILITARY;
-    }
-
-    @Override
-    protected String getMarketDescription() {
-        return "Military";
-    }
 
     @Override
     protected int getGrowthRate() {
