@@ -28,6 +28,14 @@ public abstract class AddsMarket extends SupportInfraGrowsPopulation {
 
         apply(true);
 
+        addMarket();
+
+        if (!isFunctional()) {
+            unapply();
+        }
+    }
+
+    protected void addMarket() {
         if (isFunctional() && market.isPlayerOwned()) {
             SubmarketAPI open = market.getSubmarket(getSubmarket());
             if (open == null) {
@@ -49,16 +57,16 @@ public abstract class AddsMarket extends SupportInfraGrowsPopulation {
         market.getStability().modifyFlat(getModId(), -STABILITY_PELANTY, getNameForModifier());
 
         market.getIncomeMult().modifyPercent(getModId(0), BASE_BONUS, getNameForModifier());
-
-        if (!isFunctional()) {
-            unapply();
-        }
     }
 
     @Override
     public void unapply() {
         super.unapply();
 
+        removeMarket();
+    }
+
+    protected void removeMarket() {
         if (market.isPlayerOwned()) {
             SubmarketAPI open = market.getSubmarket(getSubmarket());
             saved = open;
