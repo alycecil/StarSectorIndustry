@@ -4,7 +4,7 @@ import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.impl.campaign.ids.Conditions;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
-import com.github.alycecil.econ.model.IndustryBonus;
+import com.github.alycecil.econ.model.IndustryEffect;
 
 import java.awt.*;
 
@@ -16,7 +16,7 @@ public abstract class PollutingIndustry extends PopulationAwareExtension {
 
     public static final Color WARNING = Color.YELLOW.darker();
 
-    public PollutingIndustry(IndustryBonus... bonuses) {
+    public PollutingIndustry(IndustryEffect... bonuses) {
         super(bonuses);
     }
 

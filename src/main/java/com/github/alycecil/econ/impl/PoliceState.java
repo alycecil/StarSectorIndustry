@@ -10,7 +10,9 @@ public class PoliceState extends SupportInfraGrowsPopulation {
     public static final String CRIMES_AGAINST_HUMANITY = "Police state.";
 
     public PoliceState() {
-        super(-0.05f, new PopulationCommodityDemand(Commodities.MARINES, 3, CRIMES_AGAINST_HUMANITY));
+        super(-0.05f,
+                new PopulationCommodityDemand(Commodities.HAND_WEAPONS, 2, CRIMES_AGAINST_HUMANITY),
+                new PopulationCommodityDemand(Commodities.MARINES, 3, CRIMES_AGAINST_HUMANITY));
     }
 
     @Override
@@ -19,24 +21,14 @@ public class PoliceState extends SupportInfraGrowsPopulation {
     }
 
     @Override
-    public int getDemand() {
-        return market.getSize() - 2;
-    }
-
-    @Override
     protected String getDescription() {
         return CRIMES_AGAINST_HUMANITY;
     }
 
     @Override
-    protected String getCommodity() {
-        return Commodities.HAND_WEAPONS;
-    }
-
-    @Override
-    protected void applyForIndustry() {
-        super.applyForIndustry();
-        market.getStability().modifyFlat(getModId(0), 3, getNameForModifier());
+    protected void applyForIndustry(float effectiveness) {
+        super.applyForIndustry(effectiveness);
+        market.getStability().modifyFlat(getModId(0), 3*effectiveness, getNameForModifier());
     }
 
     @Override
@@ -44,6 +36,4 @@ public class PoliceState extends SupportInfraGrowsPopulation {
         super.unapplyForIndustry();
         market.getStability().unmodifyFlat(getModId(0));
     }
-
-
 }

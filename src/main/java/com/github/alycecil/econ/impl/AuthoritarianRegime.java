@@ -10,7 +10,10 @@ public class AuthoritarianRegime extends SupportInfraGrowsPopulation {
     public static final String CRIMES_AGAINST_HUMANITY = "Crimes against humanity.";
 
     public AuthoritarianRegime() {
-        super(-0.05f, new PopulationCommodityDemand(Commodities.MARINES, 1, CRIMES_AGAINST_HUMANITY));
+        super(-0.05f,
+                new PopulationCommodityDemand(Commodities.HAND_WEAPONS, 0, CRIMES_AGAINST_HUMANITY),
+                new PopulationCommodityDemand(Commodities.MARINES, 1, CRIMES_AGAINST_HUMANITY)
+        );
     }
 
     @Override
@@ -19,24 +22,14 @@ public class AuthoritarianRegime extends SupportInfraGrowsPopulation {
     }
 
     @Override
-    public int getDemand() {
-        return market.getSize();
-    }
-
-    @Override
     protected String getDescription() {
         return CRIMES_AGAINST_HUMANITY;
     }
 
     @Override
-    protected String getCommodity() {
-        return Commodities.HAND_WEAPONS;
-    }
-
-    @Override
-    protected void applyForIndustry() {
-        super.applyForIndustry();
-        market.getStability().modifyFlat(getModId(0), 5, getNameForModifier());
+    protected void applyForIndustry(float effectiveness) {
+        super.applyForIndustry(effectiveness);
+        market.getStability().modifyFlat(getModId(0), 5*effectiveness, getNameForModifier());
     }
 
     @Override

@@ -22,19 +22,10 @@ public class LuxCivilianInfra extends SupportInfraGrowsPopulation implements Mar
 
     public LuxCivilianInfra() {
         super(0.08f,
+                new PopulationCommodityDemand(Commodities.LUXURY_GOODS, 0, DESC),
                 new PopulationCommodityDemand(Commodities.FOOD, -1, DESC),
                 new PopulationCommodityDemand(Commodities.HEAVY_MACHINERY, 3, DESC)
         );
-    }
-
-    @Override
-    protected String getCommodity() {
-        return Commodities.LUXURY_GOODS;
-    }
-
-    @Override
-    public int getDemand() {
-        return market.getSize();
     }
 
     @Override

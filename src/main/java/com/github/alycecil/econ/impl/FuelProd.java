@@ -5,11 +5,12 @@ import com.fs.starfarer.api.impl.campaign.ids.Commodities;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.Industries;
 import com.fs.starfarer.api.impl.campaign.population.PopulationComposition;
+import com.github.alycecil.econ.impl.common.HasEffectiveness;
 import com.github.alycecil.econ.impl.common.PollutingIndustry;
 import com.github.alycecil.econ.model.PopulationCommodityBonus;
 import com.github.alycecil.econ.model.PopulationCommodityDemand;
 
-public class FuelProd extends PollutingIndustry {
+public class FuelProd extends PollutingIndustry implements HasEffectiveness {
 
     public static final String NAME = "Fuel Production";
     public static final String DESC = "Bulk";

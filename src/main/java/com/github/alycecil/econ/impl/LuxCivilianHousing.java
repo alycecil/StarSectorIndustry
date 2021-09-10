@@ -8,14 +8,16 @@ import com.fs.starfarer.api.impl.campaign.ids.Submarkets;
 import com.fs.starfarer.api.impl.campaign.population.PopulationComposition;
 import com.fs.starfarer.api.util.Pair;
 import com.github.alycecil.econ.impl.common.AddsMarket;
+import com.github.alycecil.econ.impl.common.HasEffectiveness;
 import com.github.alycecil.econ.model.PopulationCommodityDemand;
 
-public class LuxCivilianHousing extends AddsMarket implements MarketImmigrationModifier {
+public class LuxCivilianHousing extends AddsMarket implements MarketImmigrationModifier, HasEffectiveness {
 
     public static final String DESC = "Population (Wealthy)";
 
     public LuxCivilianHousing() {
         super(0.08f,
+                new PopulationCommodityDemand(Commodities.LUXURY_GOODS, -3, DESC),
                 new PopulationCommodityDemand(Commodities.FOOD, -3, DESC),
                 new PopulationCommodityDemand(Commodities.LOBSTER, 0, DESC),
                 new PopulationCommodityDemand(Commodities.SUPPLIES, 2, DESC),
@@ -28,16 +30,6 @@ public class LuxCivilianHousing extends AddsMarket implements MarketImmigrationM
                 new PopulationCommodityDemand(Commodities.SHIPS, 5, DESC),
                 new PopulationCommodityDemand(Commodities.MARINES, 6, DESC)
         );
-    }
-
-    @Override
-    protected String getCommodity() {
-        return Commodities.LUXURY_GOODS;
-    }
-
-    @Override
-    public int getDemand() {
-        return market.getSize() + 3;
     }
 
     @Override
@@ -74,8 +66,8 @@ public class LuxCivilianHousing extends AddsMarket implements MarketImmigrationM
     }
 
     @Override
-    protected void applyForIndustry() {
-        super.applyForIndustry();
+    protected void applyForIndustry(float effectiveness) {
+        super.applyForIndustry(effectiveness);
 
         Pair<String, Integer> deficit = getMaxDeficit(Commodities.FOOD, Commodities.LOBSTER);
         if (deficit.two <= 0) {

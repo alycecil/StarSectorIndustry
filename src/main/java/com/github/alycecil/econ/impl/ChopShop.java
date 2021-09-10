@@ -13,6 +13,7 @@ public class ChopShop extends AddsMarket {
 
     public ChopShop() {
         super(-0.05f,
+                new PopulationCommodityDemand(Commodities.HAND_WEAPONS, 2, CRIMES_AGAINST_HUMANITY),
                 new PopulationCommodityDemand(Commodities.CREW, 3, CRIMES_AGAINST_HUMANITY),
                 new PopulationCommodityBonus(Commodities.ORGANS, 1, CRIMES_AGAINST_HUMANITY)
         );
@@ -24,24 +25,14 @@ public class ChopShop extends AddsMarket {
     }
 
     @Override
-    public int getDemand() {
-        return market.getSize() - 2;
-    }
-
-    @Override
     protected String getDescription() {
         return CRIMES_AGAINST_HUMANITY;
     }
 
     @Override
-    protected String getCommodity() {
-        return Commodities.HAND_WEAPONS;
-    }
-
-    @Override
-    protected void applyForIndustry() {
-        super.applyForIndustry();
-        market.getStability().modifyFlat(getModId(0), -2, getNameForModifier());
+    protected void applyForIndustry(float effectiveness) {
+        super.applyForIndustry(effectiveness);
+        market.getStability().modifyFlat(getModId(0), -2, CRIMES_AGAINST_HUMANITY);
     }
 
     @Override

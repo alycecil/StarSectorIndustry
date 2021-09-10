@@ -11,19 +11,10 @@ public class CivilianInfra extends SupportInfraGrowsPopulation implements Market
 
     public CivilianInfra() {
         super(0.08f,
+                new PopulationCommodityDemand(Commodities.DOMESTIC_GOODS, 0, DESC),
                 new PopulationCommodityDemand(Commodities.FOOD, 1, DESC),
                 new PopulationCommodityDemand(Commodities.HEAVY_MACHINERY, 3, DESC)
         );
-    }
-
-    @Override
-    protected String getCommodity() {
-        return Commodities.DOMESTIC_GOODS;
-    }
-
-    @Override
-    public int getDemand() {
-        return market.getSize();
     }
 
     @Override

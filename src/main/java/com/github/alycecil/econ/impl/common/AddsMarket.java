@@ -5,8 +5,7 @@ import com.fs.starfarer.api.campaign.econ.SubmarketAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
-import com.github.alycecil.econ.impl.common.SupportInfraGrowsPopulation;
-import com.github.alycecil.econ.model.IndustryBonus;
+import com.github.alycecil.econ.model.IndustryEffect;
 
 import java.awt.*;
 
@@ -16,7 +15,7 @@ import static com.fs.starfarer.api.impl.campaign.econ.impl.TradeCenter.STABILITY
 public abstract class AddsMarket extends SupportInfraGrowsPopulation {
     protected transient SubmarketAPI saved = null;
 
-    public AddsMarket(float perMarketSize, IndustryBonus... bonuses) {
+    public AddsMarket(float perMarketSize, IndustryEffect... bonuses) {
         super(perMarketSize, bonuses);
     }
 

@@ -4,7 +4,7 @@ import com.fs.starfarer.api.campaign.econ.Industry;
 import com.fs.starfarer.api.campaign.econ.MutableCommodityQuantity;
 import com.fs.starfarer.api.combat.MutableStat;
 
-public abstract class QuantityCommodityChange implements IndustryBonus {
+public abstract class QuantityCommodityChange implements IndustryEffect, HasCommodity {
     protected String commodityId;
     protected String desc;
 
@@ -14,7 +14,7 @@ public abstract class QuantityCommodityChange implements IndustryBonus {
     }
 
     @Override
-    public void apply(Industry industry, String modId) {
+    public void apply(Industry industry, String modId, float mult) {
         if (industry == null) return;
         String desc = this.desc + industry.getNameForModifier();
         MutableCommodityQuantity modifier = getModifier(industry);
@@ -22,8 +22,10 @@ public abstract class QuantityCommodityChange implements IndustryBonus {
         MutableStat quantityStat = modifier.getQuantity();
         if (quantityStat == null) return;
         int quantityActual = getQuantity(industry);
-        quantityStat.modifyFlat(modId, quantityActual, desc);
+        doChange(modId, mult, desc, quantityStat, quantityActual);
     }
+
+    protected abstract void doChange(String modId, float mult, String desc, MutableStat quantityStat, int quantityActual);
 
     public abstract MutableCommodityQuantity getModifier(Industry industry);
 
@@ -33,4 +35,8 @@ public abstract class QuantityCommodityChange implements IndustryBonus {
     }
 
     abstract int getQuantity(Industry industry);
+
+    public String getCommodityId() {
+        return commodityId;
+    }
 }

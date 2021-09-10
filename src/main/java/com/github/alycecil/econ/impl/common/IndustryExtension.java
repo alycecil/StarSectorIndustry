@@ -1,23 +1,23 @@
 package com.github.alycecil.econ.impl.common;
 
 import com.fs.starfarer.api.campaign.econ.Industry;
-import com.github.alycecil.econ.model.IndustryBonus;
+import com.github.alycecil.econ.model.IndustryEffect;
 
 public abstract class IndustryExtension extends AliceBaseIndustry {
 
-    public IndustryExtension(IndustryBonus... bonuses) {
+    public IndustryExtension(IndustryEffect... bonuses) {
         super(bonuses);
     }
 
     @Override
-    protected void applyForIndustry() {
+    protected void applyForIndustry(float effectiveness) {
         String industryId = getIndustryId();
         if (industryId != null) {
             Industry industry = market.getIndustry(industryId);
 
             if (industry != null) {
-                for (IndustryBonus bonus : bonuses) {
-                    bonus.apply(industry, getModId());
+                for (IndustryEffect bonus : bonuses) {
+                    bonus.apply(industry, getModId(), effectiveness);
                 }
             }
         }
@@ -29,7 +29,7 @@ public abstract class IndustryExtension extends AliceBaseIndustry {
         if (industryId != null) {
             Industry industry = market.getIndustry(industryId);
             if (industry != null) {
-                for (IndustryBonus bonus : bonuses) {
+                for (IndustryEffect bonus : bonuses) {
                     bonus.unapply(industry, getModId());
                 }
             }

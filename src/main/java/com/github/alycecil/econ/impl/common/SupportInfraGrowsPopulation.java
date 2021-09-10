@@ -4,7 +4,7 @@ import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.impl.campaign.population.PopulationComposition;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
-import com.github.alycecil.econ.model.IndustryBonus;
+import com.github.alycecil.econ.model.IndustryEffect;
 import com.github.alycecil.econ.util.Incoming;
 
 import java.awt.*;
@@ -13,7 +13,7 @@ public abstract class SupportInfraGrowsPopulation extends SupportInfrastructure 
 
     public static final Color COLOR = Color.YELLOW.darker();
 
-    public SupportInfraGrowsPopulation(float perMarketSize, IndustryBonus... bonuses) {
+    public SupportInfraGrowsPopulation(float perMarketSize, IndustryEffect... bonuses) {
         super(perMarketSize, bonuses);
     }
 
