@@ -4,6 +4,8 @@ import com.fs.starfarer.api.campaign.econ.MarketImmigrationModifier;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.github.alycecil.econ.model.IndustryEffect;
 
+import java.awt.*;
+
 public abstract class PopulationAwareExtension extends IndustryExtension implements MarketImmigrationModifier {
     public PopulationAwareExtension(IndustryEffect... bonuses) {
         super(bonuses);
@@ -20,7 +22,9 @@ public abstract class PopulationAwareExtension extends IndustryExtension impleme
     }
 
     @Override
-    protected void addPostUpkeepSection(TooltipMakerAPI tooltip, IndustryTooltipMode mode) {
-        tooltip.addPara("Population Breakdown:\n"+market.getPopulation().toString(), 10f);
+    protected void addPostSupplySection(TooltipMakerAPI tooltip, boolean hasSupply, IndustryTooltipMode mode) {
+        super.addPostSupplySection(tooltip, hasSupply, mode);
+
+        tooltip.addPara("Population Breakdown:\n"+market.getPopulation().toString(), Color.lightGray, 10f);
     }
 }

@@ -5,16 +5,13 @@ import com.fs.starfarer.api.impl.campaign.ids.Conditions;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
 import com.github.alycecil.econ.model.IndustryEffect;
-
-import java.awt.*;
+import com.github.alycecil.econ.util.AliceCommon;
 
 
 public abstract class PollutingIndustry extends PopulationAwareExtension {
     public static String POLLUTION_ID = Conditions.POLLUTION;
     public static float DAYS_BEFORE_POLLUTION = 90f;
     public static float DAYS_BEFORE_POLLUTION_PERMANENT = 360f;
-
-    public static final Color WARNING = Color.YELLOW.darker();
 
     public PollutingIndustry(IndustryEffect... bonuses) {
         super(bonuses);
@@ -74,13 +71,13 @@ public abstract class PollutingIndustry extends PopulationAwareExtension {
     protected void addPostSupplySection(TooltipMakerAPI tooltip, boolean hasSupply, IndustryTooltipMode mode) {
         super.addPostSupplySection(tooltip, hasSupply, mode);
         if (addedPollution && permaPollution) {
-            tooltip.addPara("The pollution caused by this industry is %s.", 10f, WARNING, Misc.getHighlightColor(), "PERMANENT");
+            tooltip.addPara("The pollution caused by this industry is %s.", 10f, AliceCommon.WARNING, Misc.getHighlightColor(), "PERMANENT");
         } else if (addedPollution || market.hasCondition(POLLUTION_ID)) {
             String daysLeft = String.valueOf(Math.max(0, DAYS_BEFORE_POLLUTION_PERMANENT - daysWithPolluter));
-            tooltip.addPara("There are %s days left before the pollution becomes permanent, from this source.", 10f, WARNING, Misc.getHighlightColor(), daysLeft);
+            tooltip.addPara("There are %s days left before the pollution becomes permanent, from this source.", 10f, AliceCommon.WARNING, Misc.getHighlightColor(), daysLeft);
         } else if (!market.hasCondition(POLLUTION_ID)) {
             String daysLeft = String.valueOf(Math.max(0, DAYS_BEFORE_POLLUTION - daysWithPolluter));
-            tooltip.addPara("There are %s days left before the pollution becomes a colony issue, from this source.", 10f, WARNING, Misc.getHighlightColor(), daysLeft);
+            tooltip.addPara("There are %s days left before the pollution becomes a colony issue, from this source.", 10f, AliceCommon.WARNING, Misc.getHighlightColor(), daysLeft);
         }
 
     }

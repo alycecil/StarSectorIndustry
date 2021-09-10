@@ -16,7 +16,7 @@ public abstract class QuantityCommodityChange implements IndustryEffect, HasComm
     @Override
     public void apply(Industry industry, String modId, float mult) {
         if (industry == null) return;
-        String desc = this.desc + industry.getNameForModifier();
+        String desc = this.desc +" for "+ industry.getNameForModifier();
         MutableCommodityQuantity modifier = getModifier(industry);
         if (modifier == null) return;
         MutableStat quantityStat = modifier.getQuantity();

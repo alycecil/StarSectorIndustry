@@ -9,7 +9,7 @@ import com.github.alycecil.econ.model.PopulationCommodityDemand;
 //TODO ALERT FACTIONS LUDDIC_*, HEGEMONY, and the League on trade or advance. Slowly causing war.
 public class ChopShop extends AddsMarket {
 
-    public static final String CRIMES_AGAINST_HUMANITY = "Organ Harvesting.";
+    public static final String CRIMES_AGAINST_HUMANITY = "Organ Harvesting";
 
     public ChopShop() {
         super(-0.05f,

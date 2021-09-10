@@ -7,7 +7,7 @@ import com.github.alycecil.econ.model.PopulationCommodityDemand;
 //TODO ALERT FACTIONS LUDDIC_*, HEGEMONY, and the League on trade or advance. Quickly causing war.
 public class PoliceState extends SupportInfraGrowsPopulation {
 
-    public static final String CRIMES_AGAINST_HUMANITY = "Police state.";
+    public static final String CRIMES_AGAINST_HUMANITY = "Police state";
 
     public PoliceState() {
         super(-0.05f,
