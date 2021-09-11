@@ -6,6 +6,7 @@ import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.population.PopulationComposition;
 import com.github.alycecil.econ.impl.common.FarmingExtension;
 import com.github.alycecil.econ.model.FlatCommodityBonus;
+import com.github.alycecil.econ.model.PopulationCommodityDemand;
 import com.github.alycecil.econ.util.AliceCommon;
 
 public class FlatFarmingExtension extends FarmingExtension {
@@ -14,7 +15,8 @@ public class FlatFarmingExtension extends FarmingExtension {
                 new FlatCommodityBonus(Commodities.ORGANICS, 2, DESC),
                 new FlatCommodityBonus(Commodities.FOOD, 3, DESC),
                 new FlatCommodityBonus(Commodities.LOBSTER, 1, DESC),
-                new FlatCommodityBonus(AliceCommon.LOBSTER, 1, DESC)
+                new FlatCommodityBonus(AliceCommon.LOBSTER, 1, DESC),
+                new PopulationCommodityDemand(Commodities.HEAVY_MACHINERY, 8, DESC)
         );
     }
 

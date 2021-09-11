@@ -12,8 +12,6 @@ import com.fs.starfarer.api.impl.campaign.ids.Commodities;
 import com.fs.starfarer.api.impl.campaign.ids.Industries;
 import com.fs.starfarer.api.util.Misc;
 import com.fs.starfarer.api.util.WeightedRandomPicker;
-import com.github.alycecil.econ.util.AliceCommon;
-import com.github.alycecil.econ.util.AliceIndustries;
 import org.apache.log4j.Logger;
 
 import java.util.List;
@@ -52,7 +50,7 @@ public class MarketCommander implements EconomyTickListener {
                 logger.debug("Player market sleeping " + market.getName());
                 return;
             }
-        }else if (market.getSize() < random.nextInt(10)) {
+        } else if (market.getSize() < random.nextInt(10)) {
             //todo debug
             logger.debug("Market " + market.getName() + " rolled not ready.");
             return;
@@ -242,9 +240,17 @@ public class MarketCommander implements EconomyTickListener {
             default:
                 if (farmers) {
                     queueIfNotPresent(picker, RuralFarmCoOp);
+                } else {
+                    queueIfNotPresent(picker, FarmingSimple);
                 }
                 if (hasSpace) {
                     addMissingIndustriesPicker(picker);
+                }
+                if (!market.hasIndustry(Industries.HIGHCOMMAND) &&
+                        !market.hasIndustry(Industries.PATROLHQ) &&
+                        !market.hasIndustry(Industries.MILITARYBASE)
+                ) {
+                    queueIfNotPresent(picker, EmergencyDefenseForce);
                 }
         }
 

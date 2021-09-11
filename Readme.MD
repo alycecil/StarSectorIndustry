@@ -17,5 +17,8 @@ Modification of starsector-core\graphics\warroom\taskicons\icon.jpg
 ### mil_sdf
 Modification of starsector-core\graphics\illustrations\quartermaster.jpg
 
+### mil_edf
+Modification of starsector-core\graphics\illustrations\quartermaster.jpg
+
 ### industrial_defence_force
 modification of starsector-core\graphics\illustrations\raid_preparation.jpg

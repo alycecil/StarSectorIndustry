@@ -1,9 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="73c3e54b-7c7c-4cc8-ba48-7b4829dbf547" name="Default Changelist" comment="">
+    <list default="true" id="73c3e54b-7c7c-4cc8-ba48-7b4829dbf547" name="Default Changelist" comment="Logs">
+      <change afterPath="$PROJECT_DIR$/graphics/icons/industry/mil_edf.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/ai/patrol/BasePatrolAssignmentAI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/ai/patrol/EDFPatrolAssignmentAI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/impl/EmergencyDefenceForce.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/impl/StandAloneFarmingExtension.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Readme.MD" beforeDir="false" afterPath="$PROJECT_DIR$/Readme.MD" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/campaign/industries.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/campaign/industries.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jars/StarSectorIndustry.jar" beforeDir="false" afterPath="$PROJECT_DIR$/jars/StarSectorIndustry.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/ai/colony/MarketCommander.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/ai/colony/MarketCommander.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/ai/patrol/StandardPatrolAssignmentAI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/ai/patrol/StandardPatrolAssignmentAI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/impl/AquacultureExtension.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/impl/AquacultureExtension.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/impl/FlatFarmingExtension.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/impl/FlatFarmingExtension.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/util/AliceIndustries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/util/AliceIndustries.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,7 +54,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="extract.method.default.visibility" value="protected" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../starsector-core/log4j-1.2.9.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/graphics/icons/industry" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.20229885" />
@@ -50,27 +62,29 @@
   </component>
   <component name="RecentsManager">
     <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="com.github.alycecil.econ.ai.patrol" />
       <recent name="com.github.alycecil.econ.impl.common" />
       <recent name="com.github.alycecil.econ.impl" />
       <recent name="com.github.alycecil.econ" />
+      <recent name="com.github.alycecil.econ.model" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.github.alycecil.econ.ai.colony" />
+      <recent name="com.github.alycecil.econ.model" />
+    </key>
+    <key name="MoveMembersDialog.RECENTS_KEY">
+      <recent name="AliceCommon" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.github.alycecil.econ.ai.patrol" />
+      <recent name="com.github.alycecil.econ.impl" />
+      <recent name="com.github.alycecil.econ.ai" />
       <recent name="com.github.alycecil.econ.model" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Program Files (x86)\Fractal Softworks\Starsector\mods\StarSectorIndustry\graphics\icons\industry" />
       <recent name="C:\Program Files (x86)\Fractal Softworks\Starsector\mods\StarSectorIndustry" />
       <recent name="C:\Program Files (x86)\Fractal Softworks\Starsector\mods\StarSectorIndustry\data\campaign" />
-    </key>
-    <key name="MoveMembersDialog.RECENTS_KEY">
-      <recent name="AliceCommon" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.github.alycecil.econ.impl" />
-      <recent name="com.github.alycecil.econ.ai" />
-      <recent name="com.github.alycecil.econ.model" />
-    </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.github.alycecil.econ.ai.colony" />
-      <recent name="com.github.alycecil.econ.model" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -97,7 +111,8 @@
       <updated>1631195130913</updated>
       <workItem from="1631195134862" duration="2762000" />
       <workItem from="1631197931904" duration="46449000" />
-      <workItem from="1631282812389" duration="54754000" />
+      <workItem from="1631282812389" duration="55854000" />
+      <workItem from="1631344076283" duration="3206000" />
     </task>
     <task id="LOCAL-00001" summary="A decent spot">
       <created>1631230676723</created>
@@ -176,7 +191,28 @@
       <option name="project" value="LOCAL" />
       <updated>1631342922693</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Better Sleep">
+      <created>1631343079647</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1631343079647</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Logs">
+      <created>1631343432472</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1631343432472</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Float to Int">
+      <created>1631343542787</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1631343542787</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -207,7 +243,10 @@
     <MESSAGE value="That method is implemented poorly, trim" />
     <MESSAGE value="keep track of the things to delete" />
     <MESSAGE value="Don't let pop count." />
-    <option name="LAST_COMMIT_MESSAGE" value="Don't let pop count." />
+    <MESSAGE value="Better Sleep" />
+    <MESSAGE value="Logs" />
+    <MESSAGE value="Float to Int" />
+    <option name="LAST_COMMIT_MESSAGE" value="Float to Int" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -219,6 +258,16 @@
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/impl/JumpDefense.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/impl/JumpDefense.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

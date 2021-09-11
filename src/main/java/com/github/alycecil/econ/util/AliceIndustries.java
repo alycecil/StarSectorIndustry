@@ -18,6 +18,8 @@ public class AliceIndustries {
     public static final String PoliceState = "police_state";
     public static final String ChopShop = "chop_shop";
     public static final String SelfDefenseForce = "military_sdf";
+    public static final String EmergencyDefenseForce = "military_edf";
     public static final String GatesCustomsNavy = "military_gate_control";
     public static final String IndustrialDefenseForce = "military_idf";
+    public static final String FarmingSimple = "farming_simple";
 }
