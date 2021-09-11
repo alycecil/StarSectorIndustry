@@ -56,11 +56,11 @@ public abstract class MilitaryIndustry extends SupportInfraGrowsPopulation imple
 
     protected abstract boolean isFullMilitaryBase();
 
-    protected abstract float getHeavy();
+    protected abstract int getHeavy();
 
-    protected abstract float getMedium();
+    protected abstract int getMedium();
 
-    protected abstract float getLight();
+    protected abstract int getLight();
 
     @Override
     protected void unapplyForIndustry() {

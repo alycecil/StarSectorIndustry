@@ -28,17 +28,17 @@ public class SelfDefenceForce extends MilitaryIndustry {
     }
 
     @Override
-    protected float getHeavy() {
+    protected int getHeavy() {
         return market.getSize() > 8 ? 1 : 0;
     }
 
     @Override
-    protected float getMedium() {
+    protected int getMedium() {
         return market.getSize() > 6 ? 2 : 1;
     }
 
     @Override
-    protected float getLight() {
+    protected int getLight() {
         return Math.min(market.getSize() - 1, 5);
     }
 

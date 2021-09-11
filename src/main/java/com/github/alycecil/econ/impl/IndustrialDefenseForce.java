@@ -28,17 +28,17 @@ public class IndustrialDefenseForce extends MilitaryIndustry {
     }
 
     @Override
-    protected float getHeavy() {
+    protected int getHeavy() {
         return 0;
     }
 
     @Override
-    protected float getMedium() {
+    protected int getMedium() {
         return 0;
     }
 
     @Override
-    protected float getLight() {
+    protected int getLight() {
         return Math.min(market.getSize(), 8);
     }
 
