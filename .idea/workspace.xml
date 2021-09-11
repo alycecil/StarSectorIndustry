@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="73c3e54b-7c7c-4cc8-ba48-7b4829dbf547" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/util/IndEvo_ids.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/util/Mods.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/campaign/industries.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/campaign/industries.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/ai/patrol/EDFPatrolAssignmentAI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/ai/patrol/EDFPatrolAssignmentAI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/impl/EmergencyDefenceForce.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/impl/EmergencyDefenceForce.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jars/StarSectorIndustry.jar" beforeDir="false" afterPath="$PROJECT_DIR$/jars/StarSectorIndustry.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/ai/colony/MarketCommander.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/ai/colony/MarketCommander.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/autowires/OnLoadDetector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/autowires/OnLoadDetector.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -44,7 +46,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="extract.method.default.visibility" value="protected" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/graphics/icons/industry" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/util" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.20229885" />
@@ -59,6 +61,7 @@
       <recent name="com.github.alycecil.econ.model" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.github.alycecil.econ.util" />
       <recent name="com.github.alycecil.econ.ai.colony" />
       <recent name="com.github.alycecil.econ.model" />
     </key>
@@ -72,6 +75,7 @@
       <recent name="com.github.alycecil.econ.model" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Program Files (x86)\Fractal Softworks\Starsector\mods\StarSectorIndustry\src\main\java\com\github\alycecil\econ\util" />
       <recent name="C:\Program Files (x86)\Fractal Softworks\Starsector\mods\StarSectorIndustry\graphics\icons\industry" />
       <recent name="C:\Program Files (x86)\Fractal Softworks\Starsector\mods\StarSectorIndustry" />
       <recent name="C:\Program Files (x86)\Fractal Softworks\Starsector\mods\StarSectorIndustry\data\campaign" />
@@ -102,7 +106,7 @@
       <workItem from="1631195134862" duration="2762000" />
       <workItem from="1631197931904" duration="46449000" />
       <workItem from="1631282812389" duration="55854000" />
-      <workItem from="1631344076283" duration="3585000" />
+      <workItem from="1631344076283" duration="6965000" />
     </task>
     <task id="LOCAL-00001" summary="A decent spot">
       <created>1631230676723</created>
@@ -209,7 +213,21 @@
       <option name="project" value="LOCAL" />
       <updated>1631347956252</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="EDF">
+      <created>1631348504413</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1631348504413</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Time for bed, making stupid mistakes.">
+      <created>1631348931569</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1631348931569</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -244,7 +262,9 @@
     <MESSAGE value="Logs" />
     <MESSAGE value="Float to Int" />
     <MESSAGE value="More stuff for ai to build" />
-    <option name="LAST_COMMIT_MESSAGE" value="More stuff for ai to build" />
+    <MESSAGE value="EDF" />
+    <MESSAGE value="Time for bed, making stupid mistakes." />
+    <option name="LAST_COMMIT_MESSAGE" value="Time for bed, making stupid mistakes." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

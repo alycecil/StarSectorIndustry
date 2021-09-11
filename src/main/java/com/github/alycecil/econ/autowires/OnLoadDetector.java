@@ -8,6 +8,7 @@ import com.fs.starfarer.api.campaign.listeners.ColonyDecivListener;
 import com.fs.starfarer.api.campaign.listeners.ListenerManagerAPI;
 import com.fs.starfarer.api.campaign.listeners.PlayerColonizationListener;
 import com.github.alycecil.econ.ai.colony.MarketCommander;
+import com.github.alycecil.econ.util.Mods;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -60,6 +61,14 @@ public class OnLoadDetector extends BaseModPlugin implements PlayerColonizationL
 
 
     ////// Mod Loaded Listener
+
+
+    @Override
+    public void onApplicationLoad() throws Exception {
+        Mods.indEvo = Global.getSettings().getModManager().isModEnabled("IndEvo");
+        Mods.nexelin = Global.getSettings().getModManager().isModEnabled("nexerelin");
+        super.onApplicationLoad();
+    }
 
     @Override
     public void onGameLoad(boolean newGame) {

@@ -12,6 +12,8 @@ import com.fs.starfarer.api.impl.campaign.ids.Commodities;
 import com.fs.starfarer.api.impl.campaign.ids.Industries;
 import com.fs.starfarer.api.util.Misc;
 import com.fs.starfarer.api.util.WeightedRandomPicker;
+import com.github.alycecil.econ.util.IndEvo_ids;
+import com.github.alycecil.econ.util.Mods;
 import org.apache.log4j.Logger;
 
 import java.util.List;
@@ -119,7 +121,8 @@ public class MarketCommander implements EconomyTickListener {
         float stability = market.getStability().getModifiedValue();
 
         boolean cruel = market.getFaction().isIllegal(Commodities.HAND_WEAPONS)
-                && !market.getFaction().isIllegal(Commodities.ORGANS);
+                && !market.getFaction().isIllegal(Commodities.ORGANS)
+                && !market.isPlayerOwned();
 
         if (doStability(constructionQueue, stability, cruel)) return true;
 
@@ -165,9 +168,14 @@ public class MarketCommander implements EconomyTickListener {
     private boolean doPicker(ConstructionQueue constructionQueue, float stability, boolean cruel, boolean farmers, boolean waterFarmers, boolean miners, int num, int max) {
         WeightedRandomPicker<String> picker = new WeightedRandomPicker<>(random);
         boolean hasSpace = num >= max;
+        boolean notMilitary = !market.hasIndustry(Industries.HIGHCOMMAND) &&
+                !market.hasIndustry(Industries.PATROLHQ) &&
+                !market.hasIndustry(Industries.MILITARYBASE);
+
+        boolean heavyIndustry = market.hasIndustry(Industries.ORBITALWORKS) || market.hasIndustry(Industries.HEAVYINDUSTRY);
 
         switch (market.getSize()) {
-            case 10:
+            case 9:
                 if (hasSpace) {
                     queueIfNotPresent(picker, PopulationWealthy, 10);
 
@@ -178,13 +186,13 @@ public class MarketCommander implements EconomyTickListener {
                         queueIfNotPresent(picker, ChopShop);
                     }
                 }
-            case 9:
+            case 8:
                 queueIfNotPresent(picker, SpaceElevator);
                 queueIfNotPresent(picker, GatesCustomsNavy);
                 if (farmers && hasSpace) {
                     queueIfNotPresent(picker, IndustrialFarming);
                 }
-            case 8:
+            case 7:
                 if (market.hasIndustry(Industries.HEAVYINDUSTRY)) {
                     queueIfNotPresent(picker, IndustrialDefenseForce);
                 } else {
@@ -194,7 +202,7 @@ public class MarketCommander implements EconomyTickListener {
                 if (farmers && hasSpace) {
                     queueIfNotPresent(picker, StateFarms);
                 }
-            case 7:
+            case 6:
 
                 queueIfNotPresent(picker, CivilianInfrastructureCommon);
 
@@ -208,19 +216,19 @@ public class MarketCommander implements EconomyTickListener {
                         queueIfNotPresent(picker, BulkFuelProduction);
                     }
                 }
-            case 6:
+            case 5:
                 queueIfNotPresent(picker, TransportationInfrastructure);
 
                 if (market.hasIndustry(Industries.ORBITALWORKS)) {
                     queueIfNotPresent(picker, IndustrialDefenseForce);
                 }
-            case 5:
+            case 4:
                 if (waterFarmers) {
                     queueIfNotPresent(picker, AquacultureExtensions);
                 } else if (!farmers && miners && hasSpace) {
                     queueIfNotPresent(picker, TraceMining);
                 }
-            case 4:
+            case 3:
                 if (market.hasIndustry(Industries.HIGHCOMMAND)) {
                     if (cruel) {
                         queueIfNotPresent(picker, PoliceState);
@@ -233,25 +241,12 @@ public class MarketCommander implements EconomyTickListener {
                     }
                 }
                 if (hasSpace) {
-                    if (miners && (market.hasIndustry(Industries.ORBITALWORKS) || market.hasIndustry(Industries.HEAVYINDUSTRY))) {
+                    if (miners && heavyIndustry) {
                         queueIfNotPresent(picker, Industries.REFINING);
                     }
                 }
             default:
-                if (farmers) {
-                    queueIfNotPresent(picker, RuralFarmCoOp);
-                } else {
-                    queueIfNotPresent(picker, FarmingSimple);
-                }
-                if (hasSpace) {
-                    addMissingIndustriesPicker(picker);
-                }
-                if (!market.hasIndustry(Industries.HIGHCOMMAND) &&
-                        !market.hasIndustry(Industries.PATROLHQ) &&
-                        !market.hasIndustry(Industries.MILITARYBASE)
-                ) {
-                    queueIfNotPresent(picker, EmergencyDefenseForce);
-                }
+                allColoniesPicker(picker, farmers, cruel, hasSpace, notMilitary, heavyIndustry);
         }
 
         String result = picker.pick();
@@ -260,6 +255,67 @@ public class MarketCommander implements EconomyTickListener {
         }
         constructionQueue.addToEnd(result, COST);
         return true;
+    }
+
+    private void allColoniesPicker(WeightedRandomPicker<String> picker, boolean farmers, boolean cruel, boolean hasSpace, boolean notMilitary, boolean heavyIndustry) {
+        if (farmers) {
+            queueIfNotPresent(picker, RuralFarmCoOp);
+        } else {
+            queueIfNotPresent(picker, FarmingSimple);
+        }
+        if (hasSpace) {
+            addMissingIndustriesPicker(picker);
+        }
+
+        if (notMilitary
+        ) {
+            queueIfNotPresent(picker, EmergencyDefenseForce);
+        }else{
+            if(!heavyIndustry) {
+                queueIfNotPresent(picker, PopulationWealthy, 1);
+            }
+            queueIfNotPresent(picker, Industries.PATROLHQ, 10);
+        }
+        if (hasSpace) {
+            //vanilla
+            if(!heavyIndustry){
+                queueIfNotPresent(picker, Industries.HEAVYINDUSTRY, 10);
+            }
+
+            if(Mods.isIndustrialEvo()){
+                if(cruel){
+                    queueIfNotPresent(picker, IndEvo_ids.PIRATEHAVEN);
+                }
+                queueIfNotPresent(picker, IndEvo_ids.REQCENTER, 1);
+                queueIfNotPresent(picker, IndEvo_ids.SENATE, 4);
+                queueIfNotPresent(picker, IndEvo_ids.PORT, 1);
+                queueIfNotPresent(picker, IndEvo_ids.SUPCOM, 1);
+
+                if(!market.isPlayerOwned()) {
+                    queueIfNotPresent(picker, IndEvo_ids.EMBASSY, 4);
+                }
+
+                if(heavyIndustry){
+                    queueIfNotPresent(picker, IndEvo_ids.COMFORGE, 2 );
+                    queueIfNotPresent(picker, IndEvo_ids.ADINFRA, 2 );
+                    queueIfNotPresent(picker, IndEvo_ids.ADASSEM, 2 );
+                    queueIfNotPresent(picker, IndEvo_ids.ADMANUF, 2 );
+                    queueIfNotPresent(picker, IndEvo_ids.HULLFORGE, 1);
+                    queueIfNotPresent(picker, IndEvo_ids.REPAIRDOCKS, 1);
+                    queueIfNotPresent(picker, IndEvo_ids.DECONSTRUCTOR, 1);
+                }
+
+                if(notMilitary) {
+                    queueIfNotPresent(picker, IndEvo_ids.SCRAPYARD, 10);
+                    queueIfNotPresent(picker, IndEvo_ids.ENGHUB, 2 );
+                    queueIfNotPresent(picker, IndEvo_ids.REQCENTER, 2);
+                }else{
+                    queueIfNotPresent(picker, IndEvo_ids.ACADEMY, 50);
+                    queueIfNotPresent(picker, IndEvo_ids.COMARRAY, 10);
+                    queueIfNotPresent(picker, IndEvo_ids.INTARRAY, 1);
+                }
+            }
+        }
     }
 
     private void addMissingIndustriesPicker(WeightedRandomPicker<String> picker) {
