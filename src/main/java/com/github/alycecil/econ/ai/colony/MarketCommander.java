@@ -10,6 +10,7 @@ import com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry;
 import com.fs.starfarer.api.impl.campaign.econ.impl.ConstructionQueue;
 import com.fs.starfarer.api.impl.campaign.ids.Commodities;
 import com.fs.starfarer.api.impl.campaign.ids.Industries;
+import com.fs.starfarer.api.loading.IndustrySpecAPI;
 import com.fs.starfarer.api.util.Misc;
 import com.fs.starfarer.api.util.WeightedRandomPicker;
 import com.github.alycecil.econ.util.IndEvo_ids;
@@ -23,7 +24,6 @@ import static com.fs.starfarer.api.impl.campaign.econ.impl.Farming.AQUA_PLANETS;
 import static com.github.alycecil.econ.util.AliceIndustries.*;
 
 public class MarketCommander implements EconomyTickListener {
-    private static final int COST = 100;
 
     MarketAPI market;
     private volatile static Random random = new Random();
@@ -153,11 +153,11 @@ public class MarketCommander implements EconomyTickListener {
     private boolean doStability(ConstructionQueue constructionQueue, float stability, boolean cruel) {
         if (stability < 5) {
             if (!market.hasIndustry(PoliceState)) {
-                constructionQueue.addToEnd(PoliceState, COST);
+                constructionQueue.addToEnd(PoliceState, (int) Global.getSettings().getIndustrySpec(PoliceState).getCost());
                 return true;
             } else if (cruel && !market.hasIndustry(AuthoritarianRegime) && market.getSize() > 4) {
                 //need a large enough population for tribalism to falter to the point where otherism starts and survival is not a primary concern.
-                constructionQueue.addToEnd(AuthoritarianRegime, COST);
+                constructionQueue.addToEnd(AuthoritarianRegime, (int) Global.getSettings().getIndustrySpec(AuthoritarianRegime).getCost());
                 return true;
             }
         }
@@ -252,7 +252,15 @@ public class MarketCommander implements EconomyTickListener {
         if (result == null) {
             return false;
         }
-        constructionQueue.addToEnd(result, COST);
+        IndustrySpecAPI industrySpec = Global.getSettings().getIndustrySpec(result);
+        if (industrySpec == null) {
+            return false;
+        }
+        int cost = (int) industrySpec.getCost();
+        if (market.isPlayerOwned()) {
+            cost /= 100f;
+        }
+        constructionQueue.addToEnd(result, cost);
         return true;
     }
 
@@ -332,16 +340,21 @@ public class MarketCommander implements EconomyTickListener {
                     AQUA_PLANETS.contains(market.getPlanetEntity().getTypeId());
 
             if (canAquaculture) {
-                constructionQueue.addToEnd(Industries.AQUACULTURE, COST);
+                constructionQueue.addToEnd(Industries.AQUACULTURE,
+                        (int) Global.getSettings().getIndustrySpec(Industries.AQUACULTURE).getCost()
+                );
             } else {
-                constructionQueue.addToEnd(Industries.FARMING, COST);
+                constructionQueue.addToEnd(Industries.FARMING, (int) Global.getSettings().getIndustrySpec(Industries.FARMING).getCost());
             }
 
             return true;
 
         }
         if (!miners && hasConditions(Industries.MINING)) {
-            constructionQueue.addToEnd(Industries.MINING, COST);
+            constructionQueue.addToEnd(
+                    Industries.MINING,
+                    (int) Global.getSettings().getIndustrySpec(Industries.MINING).getCost()
+            );
             return true;
         }
         return false;

@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="73c3e54b-7c7c-4cc8-ba48-7b4829dbf547" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jars/StarSectorIndustry.jar" beforeDir="false" afterPath="$PROJECT_DIR$/jars/StarSectorIndustry.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/ai/colony/MarketCommander.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/ai/colony/MarketCommander.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/util/Mods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/util/Mods.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -102,7 +104,7 @@
       <workItem from="1631195134862" duration="2762000" />
       <workItem from="1631197931904" duration="46449000" />
       <workItem from="1631282812389" duration="55854000" />
-      <workItem from="1631344076283" duration="9383000" />
+      <workItem from="1631344076283" duration="12971000" />
     </task>
     <task id="LOCAL-00001" summary="A decent spot">
       <created>1631230676723</created>
@@ -237,7 +239,14 @@
       <option name="project" value="LOCAL" />
       <updated>1631373676602</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Make it rarer to build">
+      <created>1631374768492</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1631374768492</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -275,7 +284,8 @@
     <MESSAGE value="Time for bed, making stupid mistakes." />
     <MESSAGE value="Add AI for IndEvo as well" />
     <MESSAGE value="Cleanup" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cleanup" />
+    <MESSAGE value="Make it rarer to build" />
+    <option name="LAST_COMMIT_MESSAGE" value="Make it rarer to build" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
