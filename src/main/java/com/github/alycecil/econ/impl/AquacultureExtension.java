@@ -7,6 +7,7 @@ import com.fs.starfarer.api.impl.campaign.ids.Industries;
 import com.fs.starfarer.api.impl.campaign.population.PopulationComposition;
 import com.github.alycecil.econ.impl.common.PopulationAwareExtension;
 import com.github.alycecil.econ.model.FlatCommodityBonus;
+import com.github.alycecil.econ.util.AliceCommon;
 
 public class AquacultureExtension extends PopulationAwareExtension {
     public static final String AQUACULTURE = "Aquaculture";
@@ -16,7 +17,8 @@ public class AquacultureExtension extends PopulationAwareExtension {
         super(
                 new FlatCommodityBonus(Commodities.ORGANICS, 1, DESC),
                 new FlatCommodityBonus(Commodities.FOOD, 2, DESC),
-                new FlatCommodityBonus(Commodities.LOBSTER, 2, DESC)
+                new FlatCommodityBonus(Commodities.LOBSTER, 1, DESC),
+                new FlatCommodityBonus(AliceCommon.LOBSTER, 2, DESC)
         );
     }
 
