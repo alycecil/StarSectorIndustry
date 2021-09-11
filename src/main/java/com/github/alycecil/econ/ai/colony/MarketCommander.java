@@ -108,13 +108,6 @@ public class MarketCommander implements EconomyTickListener {
             logger.info("Market " + market.getName() + " starting building.");
 
             BaseIndustry.buildNextInQueue(market);
-        }else{
-            for (Industry industry : market.getIndustries()) {
-                if(industry.canUpgrade() && !industry.isUpgrading()){
-                    industry.startUpgrading();
-                    break;
-                }
-            }
         }
     }
 
