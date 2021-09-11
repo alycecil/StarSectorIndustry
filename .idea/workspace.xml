@@ -1,22 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="73c3e54b-7c7c-4cc8-ba48-7b4829dbf547" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/log4j_1_2_9.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/ai/colony/MarketCommander.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/autowires/OnLoadDetector.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/util/AliceIndustries.java" afterDir="false" />
+    <list default="true" id="73c3e54b-7c7c-4cc8-ba48-7b4829dbf547" name="Default Changelist" comment="AI Builds the Things.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StarSectorIndustry.iml" beforeDir="false" afterPath="$PROJECT_DIR$/StarSectorIndustry.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jars/StarSectorIndustry.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mod_info.json" beforeDir="false" afterPath="$PROJECT_DIR$/mod_info.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/ai/JumpGatePatrolAssignmentAI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/ai/patrol/JumpGatePatrolAssignmentAI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/ai/SDFPatrolAssignmentAI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/ai/patrol/SDFPatrolAssignmentAI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/ai/SimplePatrolAssignmentAI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/ai/patrol/SimplePatrolAssignmentAI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/ai/StandardPatrolAssignmentAI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/ai/patrol/StandardPatrolAssignmentAI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/impl/IndustrialDefenseForce.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/impl/IndustrialDefenseForce.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/impl/JumpDefense.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/impl/JumpDefense.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/impl/SelfDefenceForce.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/impl/SelfDefenceForce.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jars/StarSectorIndustry.jar" beforeDir="false" afterPath="$PROJECT_DIR$/jars/StarSectorIndustry.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/autowires/OnLoadDetector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/autowires/OnLoadDetector.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -110,7 +98,7 @@
       <updated>1631195130913</updated>
       <workItem from="1631195134862" duration="2762000" />
       <workItem from="1631197931904" duration="46449000" />
-      <workItem from="1631282812389" duration="47681000" />
+      <workItem from="1631282812389" duration="53709000" />
     </task>
     <task id="LOCAL-00001" summary="A decent spot">
       <created>1631230676723</created>
@@ -161,7 +149,21 @@
       <option name="project" value="LOCAL" />
       <updated>1631326967099</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="AI Builds the Things in demi-random order">
+      <created>1631340788297</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1631340788297</updated>
+    </task>
+    <task id="LOCAL-00009" summary="That method is implemented poorly, trim">
+      <created>1631341093680</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1631341093680</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -188,7 +190,9 @@
     <MESSAGE value="Add Fleet Creators, cleanup and art" />
     <MESSAGE value="Use Produced" />
     <MESSAGE value="Define whos the market owner" />
-    <option name="LAST_COMMIT_MESSAGE" value="Define whos the market owner" />
+    <MESSAGE value="AI Builds the Things in demi-random order" />
+    <MESSAGE value="That method is implemented poorly, trim" />
+    <option name="LAST_COMMIT_MESSAGE" value="That method is implemented poorly, trim" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

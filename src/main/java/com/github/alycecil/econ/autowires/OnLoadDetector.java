@@ -5,24 +5,39 @@ import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.PlanetAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.campaign.listeners.ColonyDecivListener;
+import com.fs.starfarer.api.campaign.listeners.ListenerManagerAPI;
 import com.fs.starfarer.api.campaign.listeners.PlayerColonizationListener;
 import com.github.alycecil.econ.ai.colony.MarketCommander;
 
+import java.util.LinkedList;
+import java.util.List;
+
 //@ dear mod loader, please see me
 public class OnLoadDetector extends BaseModPlugin implements PlayerColonizationListener, ColonyDecivListener {
+    static final List<MarketCommander> commanders = new LinkedList<>();
 
     protected void replaceMarketCommanders() {
-        Global.getLogger(this.getClass()).info("Market Commanders Initializing.");
+        synchronized (commanders) {
+            Global.getLogger(this.getClass()).info("Market Commanders Initializing.");
 
-        //flush
-        Global.getSector().getListenerManager().removeListenerOfClass(MarketCommander.class);
-        Global.getSector().getListenerManager().removeListenerOfClass(OnLoadDetector.class);
+            //flush
+            ListenerManagerAPI listenerManager = Global.getSector().getListenerManager();
+            for (MarketCommander commander : commanders) {
+                listenerManager.removeListener(commander);
+            }
+            commanders.clear();
+            listenerManager.removeListenerOfClass(MarketCommander.class);
 
-        //callback on new markets
-        Global.getSector().getListenerManager().addListener(this, true);
+            listenerManager.removeListener(this);
+            listenerManager.removeListenerOfClass(OnLoadDetector.class);
 
-        //add for all currents
-        addMarketCommanders();
+            //callback on new markets
+            listenerManager.addListener(this, true);
+
+        }
+            //add for all currents
+            addMarketCommanders();
+
     }
 
     protected static void addMarketCommanders() {
@@ -32,11 +47,17 @@ public class OnLoadDetector extends BaseModPlugin implements PlayerColonizationL
     }
 
     private static void addMarketCommander(MarketAPI marketAPI) {
-        MarketCommander listener = new MarketCommander(marketAPI);
-        Global.getSector().getListenerManager().addListener(listener, true);
-        //TODO remove / mark debug
-        listener.reportEconomyMonthEnd();
+        synchronized (commanders) {
+            MarketCommander listener = new MarketCommander(marketAPI);
+            Global.getSector().getListenerManager().addListener(listener, true);
+            commanders.add(listener);
+
+            //TODO remove / check if mark debug
+            listener.reportEconomyMonthEnd();
+        }
     }
+
+
 
     ////// Mod Loaded Listener
 
