@@ -52,6 +52,10 @@ public class MarketCommander implements EconomyTickListener {
                 logger.debug("Player market sleeping " + market.getName());
                 return;
             }
+        }else if (market.getSize() < random.nextInt(10)) {
+            //todo debug
+            logger.info("Market " + market.getName() + " rolled not ready.");
+            return;
         }
 
         if (market.getConstructionQueue() == null) {
@@ -101,11 +105,6 @@ public class MarketCommander implements EconomyTickListener {
         }
 
         if (build) {
-            if (market.getSize() < random.nextInt(10)) {
-                //todo debug
-                logger.info("Market " + market.getName() + " rolled not ready.");
-                return;
-            }
 
             //todo debug
             logger.info("Market " + market.getName() + " starting building.");
