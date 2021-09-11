@@ -4,11 +4,11 @@
  "author": "Alice Tries",
 
  "version": "0.1",
- "description": "Creates high cost extensions of existing industries.",
+ "description": "Creates high cost extensions of existing industries and an AI that builds them to crush you.",
  "gameVersion": "0.95a-RC15",
 
  "totalConversion": "false",
  "utility": "false",
  "jars":["jars/StarSectorIndustry.jar"],
-
+ "modPlugin": "com.github.alycecil.econ.autowires.OnLoadDetector"
 }

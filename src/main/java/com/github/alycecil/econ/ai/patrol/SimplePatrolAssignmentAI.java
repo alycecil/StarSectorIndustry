@@ -1,4 +1,4 @@
-package com.github.alycecil.econ.ai;
+package com.github.alycecil.econ.ai.patrol;
 
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.FleetActionTextProvider;

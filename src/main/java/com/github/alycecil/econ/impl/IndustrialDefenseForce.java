@@ -4,7 +4,7 @@ import com.fs.starfarer.api.EveryFrameScript;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.impl.campaign.fleets.RouteManager;
 import com.fs.starfarer.api.impl.campaign.ids.Commodities;
-import com.github.alycecil.econ.ai.StandardPatrolAssignmentAI;
+import com.github.alycecil.econ.ai.patrol.StandardPatrolAssignmentAI;
 import com.github.alycecil.econ.impl.common.MilitaryIndustry;
 import com.github.alycecil.econ.model.PopulationCommodityDemand;
 
