@@ -12,6 +12,8 @@ import com.fs.starfarer.api.impl.campaign.ids.Commodities;
 import com.fs.starfarer.api.impl.campaign.ids.Industries;
 import com.fs.starfarer.api.util.Misc;
 import com.fs.starfarer.api.util.WeightedRandomPicker;
+import com.github.alycecil.econ.util.AliceCommon;
+import com.github.alycecil.econ.util.AliceIndustries;
 import org.apache.log4j.Logger;
 
 import java.util.List;
@@ -60,7 +62,7 @@ public class MarketCommander implements EconomyTickListener {
         boolean building = isBuilding();
 
         if (!building) {
-            logger.debug("Market " + market.getName() + " looking for construction.");
+            logger.info("Market " + market.getName() + " looking for construction.");
 
             prepareConstruction();
         } else {
@@ -71,8 +73,9 @@ public class MarketCommander implements EconomyTickListener {
     protected boolean isBuilding() {
         boolean building = false;
         for (Industry industry : market.getIndustries()) {
-            if (industry.isBuilding()) {
-                logger.debug("Market " + market.getName() + " building a " + industry.getCurrentName() + ".");
+            boolean blackListed = Industries.POPULATION.equals(industry.getId()) || PopulationWealthy.equals(industry.getId());
+            if (!blackListed && industry.isBuilding()) {
+                logger.info("Market " + market.getName() + " building a " + industry.getCurrentName() + ".");
 
                 building = true;
                 break;
