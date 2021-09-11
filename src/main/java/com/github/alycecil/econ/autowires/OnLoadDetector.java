@@ -67,6 +67,9 @@ public class OnLoadDetector extends BaseModPlugin implements PlayerColonizationL
     public void onApplicationLoad() throws Exception {
         Mods.indEvo = Global.getSettings().getModManager().isModEnabled("IndEvo");
         Mods.nexelin = Global.getSettings().getModManager().isModEnabled("nexerelin");
+
+        Global.getLogger(this.getClass()).info("IndEvo detected : "+Mods.isIndustrialEvo());
+        Global.getLogger(this.getClass()).info("Nexerelin detected: "+Mods.isNexelin());
         super.onApplicationLoad();
     }
 

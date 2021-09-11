@@ -167,7 +167,7 @@ public class MarketCommander implements EconomyTickListener {
 
     private boolean doPicker(ConstructionQueue constructionQueue, float stability, boolean cruel, boolean farmers, boolean waterFarmers, boolean miners, int num, int max) {
         WeightedRandomPicker<String> picker = new WeightedRandomPicker<>(random);
-        boolean hasSpace = num >= max;
+        boolean hasSpace = num < max;
         boolean notMilitary = !market.hasIndustry(Industries.HIGHCOMMAND) &&
                 !market.hasIndustry(Industries.PATROLHQ) &&
                 !market.hasIndustry(Industries.MILITARYBASE);
