@@ -35,7 +35,6 @@ public class MarketCommander implements EconomyTickListener {
 
     @Override
     public void reportEconomyTick(int iterIndex) {
-        reportEconomyMonthEnd();
     }
 
     @Override
@@ -48,11 +47,11 @@ public class MarketCommander implements EconomyTickListener {
             logger.info("Market Unfit, " + market.getName());
             return;
         } else if (market.isPlayerOwned()) {
-            if (random.nextInt(10) > 1) { //rarely do for player stuff
+            if (random.nextInt(10) > 5) { //rarely do for player stuff
                 logger.debug("Player market sleeping " + market.getName());
                 return;
             }
-        } else if (market.getSize() < random.nextInt(10)) {
+        } else if (market.getSize() < random.nextInt(Mods.isIndustrialEvo() ? 20 : 50)) {
             //todo debug
             logger.debug("Market " + market.getName() + " rolled not ready.");
             return;
@@ -270,20 +269,20 @@ public class MarketCommander implements EconomyTickListener {
         if (notMilitary
         ) {
             queueIfNotPresent(picker, EmergencyDefenseForce);
-        }else{
-            if(!heavyIndustry) {
+        } else {
+            if (!heavyIndustry) {
                 queueIfNotPresent(picker, PopulationWealthy, 1);
             }
             queueIfNotPresent(picker, Industries.PATROLHQ, 10);
         }
         if (hasSpace) {
             //vanilla
-            if(!heavyIndustry){
+            if (!heavyIndustry) {
                 queueIfNotPresent(picker, Industries.HEAVYINDUSTRY, 10);
             }
 
-            if(Mods.isIndustrialEvo()){
-                if(cruel){
+            if (Mods.isIndustrialEvo()) {
+                if (cruel) {
                     queueIfNotPresent(picker, IndEvo_ids.PIRATEHAVEN);
                 }
                 queueIfNotPresent(picker, IndEvo_ids.REQCENTER, 1);
@@ -291,25 +290,25 @@ public class MarketCommander implements EconomyTickListener {
                 queueIfNotPresent(picker, IndEvo_ids.PORT, 1);
                 queueIfNotPresent(picker, IndEvo_ids.SUPCOM, 1);
 
-                if(!market.isPlayerOwned()) {
+                if (!market.isPlayerOwned()) {
                     queueIfNotPresent(picker, IndEvo_ids.EMBASSY, 4);
                 }
 
-                if(heavyIndustry){
-                    queueIfNotPresent(picker, IndEvo_ids.COMFORGE, 2 );
-                    queueIfNotPresent(picker, IndEvo_ids.ADINFRA, 2 );
-                    queueIfNotPresent(picker, IndEvo_ids.ADASSEM, 2 );
-                    queueIfNotPresent(picker, IndEvo_ids.ADMANUF, 2 );
+                if (heavyIndustry) {
+                    queueIfNotPresent(picker, IndEvo_ids.COMFORGE, 2);
+                    queueIfNotPresent(picker, IndEvo_ids.ADINFRA, 2);
+                    queueIfNotPresent(picker, IndEvo_ids.ADASSEM, 2);
+                    queueIfNotPresent(picker, IndEvo_ids.ADMANUF, 2);
                     queueIfNotPresent(picker, IndEvo_ids.HULLFORGE, 1);
                     queueIfNotPresent(picker, IndEvo_ids.REPAIRDOCKS, 1);
                     queueIfNotPresent(picker, IndEvo_ids.DECONSTRUCTOR, 1);
                 }
 
-                if(notMilitary) {
+                if (notMilitary) {
                     queueIfNotPresent(picker, IndEvo_ids.SCRAPYARD, 10);
-                    queueIfNotPresent(picker, IndEvo_ids.ENGHUB, 2 );
+                    queueIfNotPresent(picker, IndEvo_ids.ENGHUB, 2);
                     queueIfNotPresent(picker, IndEvo_ids.REQCENTER, 2);
-                }else{
+                } else {
                     queueIfNotPresent(picker, IndEvo_ids.ACADEMY, 50);
                     queueIfNotPresent(picker, IndEvo_ids.COMARRAY, 10);
                     queueIfNotPresent(picker, IndEvo_ids.INTARRAY, 1);
