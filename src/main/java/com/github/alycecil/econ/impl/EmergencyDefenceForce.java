@@ -10,13 +10,13 @@ import com.github.alycecil.econ.model.PopulationCommodityDemand;
 
 public class EmergencyDefenceForce extends MilitaryIndustry {
 
-    public static final String NAVAL_SELF_DEFENSE = "Emergency Defense Force";
+    public static final String EDF = "Emergency Defense Force";
 
     public EmergencyDefenceForce() {
         super(0.01f,
-                new PopulationCommodityDemand(Commodities.SHIPS, 3, NAVAL_SELF_DEFENSE),
-                new PopulationCommodityDemand(Commodities.FUEL, 2, NAVAL_SELF_DEFENSE),
-                new PopulationCommodityDemand(Commodities.CREW, 3, NAVAL_SELF_DEFENSE)
+                new PopulationCommodityDemand(Commodities.SHIPS, 3, EDF),
+                new PopulationCommodityDemand(Commodities.FUEL, 2, EDF),
+                new PopulationCommodityDemand(Commodities.CREW, 3, EDF)
         );
     }
 
@@ -43,7 +43,7 @@ public class EmergencyDefenceForce extends MilitaryIndustry {
 
     @Override
     protected String getDescription() {
-        return NAVAL_SELF_DEFENSE;
+        return EDF;
     }
 
     @Override

@@ -1,21 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="73c3e54b-7c7c-4cc8-ba48-7b4829dbf547" name="Default Changelist" comment="Logs">
-      <change afterPath="$PROJECT_DIR$/graphics/icons/industry/mil_edf.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/ai/patrol/BasePatrolAssignmentAI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/ai/patrol/EDFPatrolAssignmentAI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/impl/EmergencyDefenceForce.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/impl/StandAloneFarmingExtension.java" afterDir="false" />
+    <list default="true" id="73c3e54b-7c7c-4cc8-ba48-7b4829dbf547" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Readme.MD" beforeDir="false" afterPath="$PROJECT_DIR$/Readme.MD" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/campaign/industries.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/campaign/industries.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jars/StarSectorIndustry.jar" beforeDir="false" afterPath="$PROJECT_DIR$/jars/StarSectorIndustry.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/ai/colony/MarketCommander.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/ai/colony/MarketCommander.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/ai/patrol/StandardPatrolAssignmentAI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/ai/patrol/StandardPatrolAssignmentAI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/impl/AquacultureExtension.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/impl/AquacultureExtension.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/impl/FlatFarmingExtension.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/impl/FlatFarmingExtension.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/util/AliceIndustries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/util/AliceIndustries.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/ai/patrol/EDFPatrolAssignmentAI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/ai/patrol/EDFPatrolAssignmentAI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/impl/EmergencyDefenceForce.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/impl/EmergencyDefenceForce.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -112,7 +102,7 @@
       <workItem from="1631195134862" duration="2762000" />
       <workItem from="1631197931904" duration="46449000" />
       <workItem from="1631282812389" duration="55854000" />
-      <workItem from="1631344076283" duration="3206000" />
+      <workItem from="1631344076283" duration="3585000" />
     </task>
     <task id="LOCAL-00001" summary="A decent spot">
       <created>1631230676723</created>
@@ -212,7 +202,14 @@
       <option name="project" value="LOCAL" />
       <updated>1631343542787</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="More stuff for ai to build">
+      <created>1631347956252</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1631347956252</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -246,7 +243,8 @@
     <MESSAGE value="Better Sleep" />
     <MESSAGE value="Logs" />
     <MESSAGE value="Float to Int" />
-    <option name="LAST_COMMIT_MESSAGE" value="Float to Int" />
+    <MESSAGE value="More stuff for ai to build" />
+    <option name="LAST_COMMIT_MESSAGE" value="More stuff for ai to build" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
