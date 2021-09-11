@@ -54,7 +54,7 @@ public class MarketCommander implements EconomyTickListener {
             }
         }else if (market.getSize() < random.nextInt(10)) {
             //todo debug
-            logger.info("Market " + market.getName() + " rolled not ready.");
+            logger.debug("Market " + market.getName() + " rolled not ready.");
             return;
         }
 
@@ -66,7 +66,7 @@ public class MarketCommander implements EconomyTickListener {
         boolean building = isBuilding();
 
         if (!building) {
-            logger.info("Market " + market.getName() + " looking for construction.");
+            logger.debug("Market " + market.getName() + " looking for construction.");
 
             prepareConstruction();
         } else {
