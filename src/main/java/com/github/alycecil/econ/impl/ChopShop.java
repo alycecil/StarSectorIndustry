@@ -1,6 +1,9 @@
 package com.github.alycecil.econ.impl;
 
+import com.fs.starfarer.api.Global;
+import com.fs.starfarer.api.campaign.FactionAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Commodities;
+import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.Submarkets;
 import com.github.alycecil.econ.impl.common.AddsMarket;
 import com.github.alycecil.econ.model.PopulationCommodityBonus;
@@ -45,6 +48,11 @@ public class ChopShop extends AddsMarket {
     @Override
     protected String getSubmarket() {
         return Submarkets.SUBMARKET_BLACK;
+    }
+
+    @Override
+    protected FactionAPI getMarketAddedFaction() {
+        return Global.getSector().getFaction(Factions.INDEPENDENT);
     }
 
     @Override

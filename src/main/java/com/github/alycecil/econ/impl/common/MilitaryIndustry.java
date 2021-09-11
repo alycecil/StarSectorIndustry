@@ -26,7 +26,7 @@ import java.util.Random;
 import static com.fs.starfarer.api.impl.campaign.econ.impl.MilitaryBase.createPatrol;
 import static com.fs.starfarer.api.impl.campaign.econ.impl.MilitaryBase.getPatrolCombatFP;
 
-public abstract class MilitaryIndustry extends SupportInfraGrowsPopulation implements RouteManager.RouteFleetSpawner, FleetEventListener {
+public abstract class MilitaryIndustry extends SupportInfraGrowsPopulation implements RouteManager.RouteFleetSpawner, FleetEventListener, HasEffectiveness {
     public MilitaryIndustry(float perMarketSize, IndustryEffect... bonuses) {
         super(perMarketSize, bonuses);
     }

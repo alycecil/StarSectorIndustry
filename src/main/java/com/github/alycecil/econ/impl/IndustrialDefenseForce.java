@@ -51,4 +51,14 @@ public class IndustrialDefenseForce extends MilitaryIndustry {
     protected EveryFrameScript getScript(RouteManager.RouteData route, CampaignFleetAPI fleet) {
         return new StandardPatrolAssignmentAI(fleet, route);
     }
+
+    @Override
+    protected void applyForIndustry(float effectiveness) {
+        super.applyForIndustry(effectiveness);
+    }
+
+    @Override
+    protected void unapplyForIndustry() {
+        super.unapplyForIndustry();
+    }
 }

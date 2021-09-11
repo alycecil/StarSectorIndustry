@@ -1,8 +1,8 @@
 package com.github.alycecil.econ.impl.common;
 
 import com.fs.starfarer.api.Global;
+import com.fs.starfarer.api.campaign.FactionAPI;
 import com.fs.starfarer.api.campaign.econ.SubmarketAPI;
-import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
 import com.github.alycecil.econ.model.IndustryEffect;
@@ -15,11 +15,14 @@ import static com.fs.starfarer.api.impl.campaign.econ.impl.TradeCenter.STABILITY
 public abstract class AddsMarket extends SupportInfraGrowsPopulation {
     protected transient SubmarketAPI saved = null;
 
+    protected boolean addedMarket = false;
+
     public AddsMarket(float perMarketSize, IndustryEffect... bonuses) {
         super(perMarketSize, bonuses);
     }
 
     protected abstract String getSubmarket();
+
     protected abstract String getMarketDescription();
 
 
@@ -39,24 +42,32 @@ public abstract class AddsMarket extends SupportInfraGrowsPopulation {
         if (isFunctional() && market.isPlayerOwned()) {
             SubmarketAPI open = market.getSubmarket(getSubmarket());
             if (open == null) {
+                addedMarket = true;
                 if (saved != null) {
                     market.addSubmarket(saved);
                 } else {
                     market.addSubmarket(getSubmarket());
                     SubmarketAPI sub = market.getSubmarket(getSubmarket());
-                    sub.setFaction(Global.getSector().getFaction(Factions.INDEPENDENT));
+                    sub.setFaction(getMarketAddedFaction());
                     Global.getSector().getEconomy().forceStockpileUpdate(market);
                 }
 
             }
         } else if (market.isPlayerOwned()) {
-            market.removeSubmarket(getSubmarket());
+            if (addedMarket) {
+                market.removeSubmarket(getSubmarket());
+                addedMarket = false;
+            }
         }
 
         //modifyStabilityWithBaseMod();
         market.getStability().modifyFlat(getModId(), -STABILITY_PELANTY, getNameForModifier());
 
         market.getIncomeMult().modifyPercent(getModId(0), BASE_BONUS, getNameForModifier());
+    }
+
+    protected FactionAPI getMarketAddedFaction() {
+        return market.getFaction();
     }
 
     @Override
@@ -67,10 +78,11 @@ public abstract class AddsMarket extends SupportInfraGrowsPopulation {
     }
 
     protected void removeMarket() {
-        if (market.isPlayerOwned()) {
+        if (market.isPlayerOwned() && addedMarket) {
             SubmarketAPI open = market.getSubmarket(getSubmarket());
             saved = open;
             market.removeSubmarket(getSubmarket());
+            addedMarket = false;
         }
 
         market.getStability().unmodifyFlat(getModId());
@@ -86,11 +98,11 @@ public abstract class AddsMarket extends SupportInfraGrowsPopulation {
         float opad = 10f;
 
         float a = BASE_BONUS;
-        String aStr = "+" + (int)Math.round(a * 1f) + "%";
+        String aStr = "+" + (int) Math.round(a * 1f) + "%";
         tooltip.addPara("Colony income: %s", opad, h, aStr);
 
         h = Misc.getNegativeHighlightColor();
-        tooltip.addPara("Base stability penalty: %s", opad, h, "" + -(int)STABILITY_PELANTY);
+        tooltip.addPara("Base stability penalty: %s", opad, h, "" + -(int) STABILITY_PELANTY);
     }
 
     @Override
@@ -105,8 +117,14 @@ public abstract class AddsMarket extends SupportInfraGrowsPopulation {
     protected void addRightAfterDescriptionSection(TooltipMakerAPI tooltip, IndustryTooltipMode mode) {
         super.addRightAfterDescriptionSection(tooltip, mode);
 
-        if (market.isPlayerOwned() || currTooltipMode == IndustryTooltipMode.ADD_INDUSTRY) {
-            tooltip.addPara("Adds an independent \'" + getMarketDescription() + "\' that the colony's owner is able to trade with.", 10f);
+        if (market.isPlayerOwned() && addedMarket || currTooltipMode == IndustryTooltipMode.ADD_INDUSTRY) {
+            FactionAPI marketAddedFaction = getMarketAddedFaction();
+            String factionName = marketAddedFaction != null ? marketAddedFaction.getDisplayNameWithArticle() : "Independents";
+
+            tooltip.addPara("%s owns the \'%s\' that the colony's owner is able to trade with.", 10f, Misc.getHighlightColor(),
+                    factionName,
+                    getMarketDescription()
+            );
         }
     }
 }
