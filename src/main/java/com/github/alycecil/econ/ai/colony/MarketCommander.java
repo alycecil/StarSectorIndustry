@@ -249,6 +249,11 @@ public class MarketCommander implements EconomyTickListener {
         }
 
         String result = picker.pick();
+        return addToQueue(constructionQueue, result);
+    }
+
+    //RECURSIVE
+    private boolean addToQueue(ConstructionQueue constructionQueue, String result) {
         if (result == null) {
             return false;
         }
@@ -256,10 +261,19 @@ public class MarketCommander implements EconomyTickListener {
         if (industrySpec == null) {
             return false;
         }
+
+        String downgrade = industrySpec.getDowngrade();
+        if (downgrade != null && !market.hasIndustry(downgrade)) {
+            if (!addToQueue(constructionQueue, downgrade)) {
+                return false;
+            }
+        }
+
         int cost = (int) industrySpec.getCost();
         if (market.isPlayerOwned()) {
             cost /= 100f;
         }
+
         constructionQueue.addToEnd(result, cost);
         return true;
     }
@@ -282,6 +296,10 @@ public class MarketCommander implements EconomyTickListener {
                 queueIfNotPresent(picker, PopulationWealthy, 1);
             }
             queueIfNotPresent(picker, Industries.PATROLHQ, 10);
+            if(hasSpace) {
+                queueIfNotPresent(picker, Industries.MILITARYBASE, 10);
+                queueIfNotPresent(picker, Industries.HIGHCOMMAND, 5);
+            }
         }
         if (hasSpace) {
             //vanilla
