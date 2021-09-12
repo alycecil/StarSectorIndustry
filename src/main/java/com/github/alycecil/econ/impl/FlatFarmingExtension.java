@@ -14,8 +14,6 @@ public class FlatFarmingExtension extends FarmingExtension {
         super(
                 new FlatCommodityBonus(Commodities.ORGANICS, 2, DESC),
                 new FlatCommodityBonus(Commodities.FOOD, 3, DESC),
-                new FlatCommodityBonus(Commodities.LOBSTER, 1, DESC),
-                new FlatCommodityBonus(AliceCommon.LOBSTER, 1, DESC),
                 new PopulationCommodityDemand(Commodities.HEAVY_MACHINERY, 8, DESC)
         );
     }

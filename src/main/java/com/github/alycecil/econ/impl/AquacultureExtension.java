@@ -18,7 +18,6 @@ public class AquacultureExtension extends PopulationAwareExtension {
         super(
                 new FlatCommodityBonus(Commodities.ORGANICS, 1, DESC),
                 new FlatCommodityBonus(Commodities.FOOD, 2, DESC),
-                new FlatCommodityBonus(Commodities.LOBSTER, 1, DESC),
                 new FlatCommodityBonus(AliceCommon.LOBSTER, 2, DESC),
                 new PopulationCommodityDemand(Commodities.HEAVY_MACHINERY, 8, DESC)
         );

@@ -17,8 +17,7 @@ public class ScalingFarmingExtension extends FarmingExtension implements HasEffe
         super(
                 new PopulationCommodityBonus(Commodities.ORGANICS, 2, DESC),
                 new PopulationCommodityBonus(Commodities.FOOD, 2, DESC),
-                new PopulationCommodityBonus(Commodities.LOBSTER, 3, DESC),
-                new PopulationCommodityBonus(AliceCommon.LOBSTER, 3, DESC),
+                new PopulationCommodityBonus(AliceCommon.LOBSTER, 6, DESC),
                 new ConditionalFlatCommodityBonus(AliceCommon.LOBSTER, Conditions.WATER, 3, DESC),
                 new ConditionalFlatCommodityBonus(AliceCommon.LOBSTER, Conditions.WATER_SURFACE, 2, DESC),
                 new PopulationCommodityDemand(Commodities.HEAVY_MACHINERY, 3, DESC)
