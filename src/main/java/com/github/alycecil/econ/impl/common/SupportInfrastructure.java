@@ -2,10 +2,7 @@ package com.github.alycecil.econ.impl.common;
 
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
-import com.fs.starfarer.api.util.Pair;
 import com.github.alycecil.econ.model.IndustryEffect;
-
-import java.util.List;
 
 public abstract class SupportInfrastructure extends AliceBaseIndustry implements HasEffectiveness {
 

@@ -7,7 +7,6 @@ import com.fs.starfarer.api.impl.campaign.population.PopulationComposition;
 import com.github.alycecil.econ.impl.common.FarmingExtension;
 import com.github.alycecil.econ.model.FlatCommodityBonus;
 import com.github.alycecil.econ.model.PopulationCommodityDemand;
-import com.github.alycecil.econ.util.AliceCommon;
 
 public class FlatFarmingExtension extends FarmingExtension {
     public FlatFarmingExtension() {

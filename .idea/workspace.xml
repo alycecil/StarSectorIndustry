@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="73c3e54b-7c7c-4cc8-ba48-7b4829dbf547" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/impl/AquacultureExtension.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/impl/AquacultureExtension.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/impl/FlatFarmingExtension.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/impl/FlatFarmingExtension.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/impl/ScalingFarmingExtension.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/impl/ScalingFarmingExtension.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/impl/StandAloneFarmingExtension.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/impl/StandAloneFarmingExtension.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/impl/LuxCivilianInfra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/alycecil/econ/impl/LuxCivilianInfra.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -105,7 +102,7 @@
       <workItem from="1631195134862" duration="2762000" />
       <workItem from="1631197931904" duration="46449000" />
       <workItem from="1631282812389" duration="55854000" />
-      <workItem from="1631344076283" duration="17842000" />
+      <workItem from="1631344076283" duration="18368000" />
     </task>
     <task id="LOCAL-00001" summary="A decent spot">
       <created>1631230676723</created>
@@ -261,7 +258,14 @@
       <option name="project" value="LOCAL" />
       <updated>1631408764643</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Less Lobster.">
+      <created>1631410789424</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1631410789424</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -302,7 +306,8 @@
     <MESSAGE value="Make it rarer to build" />
     <MESSAGE value="Real costs if you capture it." />
     <MESSAGE value="Rename market asit didnt fit allow updrades parents to be queued instead of instant refunds." />
-    <option name="LAST_COMMIT_MESSAGE" value="Rename market asit didnt fit allow updrades parents to be queued instead of instant refunds." />
+    <MESSAGE value="Less Lobster." />
+    <option name="LAST_COMMIT_MESSAGE" value="Less Lobster." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

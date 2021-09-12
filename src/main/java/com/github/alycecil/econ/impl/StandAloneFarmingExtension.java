@@ -7,10 +7,8 @@ import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.population.PopulationComposition;
 import com.github.alycecil.econ.impl.common.AliceBaseIndustry;
 import com.github.alycecil.econ.impl.common.HasEffectiveness;
-import com.github.alycecil.econ.model.FlatCommodityBonus;
 import com.github.alycecil.econ.model.PopulationCommodityBonus;
 import com.github.alycecil.econ.model.PopulationCommodityDemand;
-import com.github.alycecil.econ.util.AliceCommon;
 
 public class StandAloneFarmingExtension extends AliceBaseIndustry implements HasEffectiveness, MarketImmigrationModifier {
     public static final String DESC = "Farming improvements";

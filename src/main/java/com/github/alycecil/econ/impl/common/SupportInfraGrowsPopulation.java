@@ -8,8 +8,6 @@ import com.github.alycecil.econ.model.IndustryEffect;
 import com.github.alycecil.econ.util.AliceCommon;
 import com.github.alycecil.econ.util.Incoming;
 
-import java.awt.*;
-
 public abstract class SupportInfraGrowsPopulation extends SupportInfrastructure {
 
 

@@ -1,7 +1,6 @@
 package com.github.alycecil.econ.impl;
 
 import com.fs.starfarer.api.impl.campaign.ids.Commodities;
-import com.fs.starfarer.api.util.Pair;
 import com.github.alycecil.econ.impl.common.SupportInfrastructure;
 import com.github.alycecil.econ.model.PopulationCommodityDemand;
 
