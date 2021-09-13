@@ -1,0 +1,11 @@
+{
+  # If you want the ai to build for you too, slap that to true.
+  "alice_marketcommander_player": true,
+
+  # Not yet implemented
+  "alice_marketcommander_costs": true,
+
+  "maxIndustries":[1,2,3,4,5,6,7,8,12,16],
+  "overMaxIndustriesPenalty":5, # stability penalty
+  "maxColonySize":9
+}

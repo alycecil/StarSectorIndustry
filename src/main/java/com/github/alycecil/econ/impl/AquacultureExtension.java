@@ -7,6 +7,8 @@ import com.fs.starfarer.api.impl.campaign.ids.Industries;
 import com.fs.starfarer.api.impl.campaign.population.PopulationComposition;
 import com.github.alycecil.econ.impl.common.PopulationAwareExtension;
 import com.github.alycecil.econ.model.FlatCommodityBonus;
+import com.github.alycecil.econ.model.FlatCommodityDemand;
+import com.github.alycecil.econ.model.PopulationCommodityBonus;
 import com.github.alycecil.econ.model.PopulationCommodityDemand;
 import com.github.alycecil.econ.util.AliceCommon;
 
@@ -18,8 +20,8 @@ public class AquacultureExtension extends PopulationAwareExtension {
         super(
                 new FlatCommodityBonus(Commodities.ORGANICS, 1, DESC),
                 new FlatCommodityBonus(Commodities.FOOD, 2, DESC),
-                new FlatCommodityBonus(AliceCommon.LOBSTER, 2, DESC),
-                new PopulationCommodityDemand(Commodities.HEAVY_MACHINERY, 8, DESC)
+                new PopulationCommodityBonus(AliceCommon.LOBSTER, 1, DESC),
+                new FlatCommodityDemand(Commodities.HEAVY_MACHINERY, 2, DESC)
         );
     }
 

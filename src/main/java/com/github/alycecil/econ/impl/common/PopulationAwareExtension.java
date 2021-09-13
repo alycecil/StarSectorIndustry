@@ -25,6 +25,6 @@ public abstract class PopulationAwareExtension extends IndustryExtension impleme
     protected void addPostSupplySection(TooltipMakerAPI tooltip, boolean hasSupply, IndustryTooltipMode mode) {
         super.addPostSupplySection(tooltip, hasSupply, mode);
 
-        tooltip.addPara("Population Breakdown:\n"+market.getPopulation().toString(), Color.lightGray, 10f);
+        tooltip.addPara("Census:\n"+market.getPopulation().toString(), Color.lightGray, 10f);
     }
 }

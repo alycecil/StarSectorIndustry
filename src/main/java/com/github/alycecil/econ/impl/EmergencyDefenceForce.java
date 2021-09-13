@@ -6,6 +6,7 @@ import com.fs.starfarer.api.impl.campaign.fleets.RouteManager;
 import com.fs.starfarer.api.impl.campaign.ids.Commodities;
 import com.github.alycecil.econ.ai.patrol.EDFPatrolAssignmentAI;
 import com.github.alycecil.econ.impl.common.MilitaryIndustry;
+import com.github.alycecil.econ.model.FlatCommodityDemand;
 import com.github.alycecil.econ.model.PopulationCommodityDemand;
 
 public class EmergencyDefenceForce extends MilitaryIndustry {
@@ -14,9 +15,9 @@ public class EmergencyDefenceForce extends MilitaryIndustry {
 
     public EmergencyDefenceForce() {
         super(0.01f,
-                new PopulationCommodityDemand(Commodities.SHIPS, 3, EDF),
-                new PopulationCommodityDemand(Commodities.FUEL, 2, EDF),
-                new PopulationCommodityDemand(Commodities.CREW, 3, EDF)
+                new FlatCommodityDemand(Commodities.SHIPS, 2, EDF),
+                new FlatCommodityDemand(Commodities.FUEL, 3, EDF),
+                new FlatCommodityDemand(Commodities.CREW, 2, EDF)
         );
     }
 
@@ -37,8 +38,7 @@ public class EmergencyDefenceForce extends MilitaryIndustry {
 
     @Override
     protected int getLight() {
-        int min = Math.min(market.getSize() - 5, 3);
-        return Math.max(1, min);
+        return 2;
     }
 
     @Override

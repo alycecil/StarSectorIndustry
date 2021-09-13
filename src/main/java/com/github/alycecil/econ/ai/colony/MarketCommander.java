@@ -47,6 +47,10 @@ public class MarketCommander implements EconomyTickListener {
             logger.info("Market Unfit, " + market.getName());
             return;
         } else if (market.isPlayerOwned()) {
+            if(!Global.getSettings().getBoolean("alice_marketcommander_player")){
+                //they dont want us to touch their colonies.
+                return;
+            }
             if (random.nextInt(10) > 5) { //rarely do for player stuff
                 logger.debug("Player market sleeping " + market.getName());
                 return;

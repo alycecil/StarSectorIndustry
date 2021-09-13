@@ -1,0 +1,7 @@
+{
+  # If you want the ai to build for you too, slap that to true.
+  "alice_marketcommander_player": false,
+
+  # Not yet implemented
+  "alice_marketcommander_costs": true
+}
