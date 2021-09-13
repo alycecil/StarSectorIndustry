@@ -18,13 +18,13 @@ public class LuxCivilianHousing extends AddsMarket implements MarketImmigrationM
 
     public LuxCivilianHousing() {
         super(0.08f,
-                new PopulationCommodityDemand(Commodities.LUXURY_GOODS, -3, DESC),
                 new PopulationCommodityDemand(Commodities.FOOD, -3, DESC),
+                new PopulationCommodityDemand(Commodities.LUXURY_GOODS, 0, DESC),
                 new PopulationCommodityDemand(AliceCommon.LOBSTER, 0, DESC),
-                new PopulationCommodityDemand(Commodities.SUPPLIES, 2, DESC),
                 new PopulationCommodityDemand(Commodities.DRUGS, 0, DESC),
                 new PopulationCommodityDemand(Commodities.DOMESTIC_GOODS, 0, DESC),
-                new PopulationCommodityDemand(Commodities.HEAVY_MACHINERY, 2, DESC),
+                new PopulationCommodityDemand(Commodities.SUPPLIES, 0, DESC),
+                new PopulationCommodityDemand(Commodities.HEAVY_MACHINERY, 0, DESC),
                 new PopulationCommodityDemand(Commodities.ORGANS, 4, DESC),
                 new PopulationCommodityDemand(Commodities.CREW, 4, DESC),
                 new PopulationCommodityDemand(Commodities.HAND_WEAPONS, 5, DESC),

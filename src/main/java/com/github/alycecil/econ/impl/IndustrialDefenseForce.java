@@ -39,7 +39,7 @@ public class IndustrialDefenseForce extends MilitaryIndustry {
 
     @Override
     protected int getLight() {
-        return Math.min(market.getSize(), 8);
+        return Math.max(1, market.getSize() / 3);
     }
 
     @Override

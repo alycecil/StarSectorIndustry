@@ -9,14 +9,12 @@ public class IndustrialTunnels extends SupportInfrastructure {
 
     public IndustrialTunnels() {
         super(0.2f,
-                new PopulationCommodityDemand(Commodities.SUPPLIES, -DEMAND, DESC),
+                new PopulationCommodityDemand(Commodities.SUPPLIES, 0, DESC),
                 new PopulationCommodityDemand(Commodities.HEAVY_MACHINERY, 2, DESC),
                 new PopulationCommodityDemand(Commodities.FUEL, 5, DESC),
                 new PopulationCommodityDemand(Commodities.DOMESTIC_GOODS, 2, DESC)
         );
     }
-
-    public static final int DEMAND = 2;
 
     @Override
     protected String getDescription() {

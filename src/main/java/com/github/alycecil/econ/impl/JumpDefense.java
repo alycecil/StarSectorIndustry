@@ -39,7 +39,7 @@ public class JumpDefense extends MilitaryIndustry {
 
     @Override
     protected int getLight() {
-        return Math.min(market.getSize(), 6);
+        return Math.min(market.getSize()/2, 3);
     }
 
     @Override

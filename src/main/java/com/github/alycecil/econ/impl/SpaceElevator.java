@@ -26,4 +26,15 @@ public class SpaceElevator extends SupportInfraGrowsPopulation implements Market
     protected int getGrowthRate() {
         return 10;
     }
+
+    @Override
+    protected void applyForIndustry(float effectiveness) {
+        super.applyForIndustry(effectiveness);
+
+    }
+
+    @Override
+    protected void unapplyForIndustry() {
+        super.unapplyForIndustry();
+    }
 }
