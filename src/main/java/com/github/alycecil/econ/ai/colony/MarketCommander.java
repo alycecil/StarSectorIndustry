@@ -12,6 +12,7 @@ import com.fs.starfarer.api.impl.campaign.ids.Commodities;
 import com.fs.starfarer.api.impl.campaign.ids.Industries;
 import com.fs.starfarer.api.loading.IndustrySpecAPI;
 import com.fs.starfarer.api.util.Misc;
+import com.fs.starfarer.api.util.Pair;
 import com.fs.starfarer.api.util.WeightedRandomPicker;
 import com.github.alycecil.econ.util.IndEvo_ids;
 import com.github.alycecil.econ.util.Mods;
@@ -47,7 +48,7 @@ public class MarketCommander implements EconomyTickListener {
             logger.info("Market Unfit, " + market.getName());
             return;
         } else if (market.isPlayerOwned()) {
-            if(!Global.getSettings().getBoolean("alice_marketcommander_player")){
+            if (!Global.getSettings().getBoolean("alice_marketcommander_player")) {
                 //they dont want us to touch their colonies.
                 return;
             }
@@ -62,7 +63,12 @@ public class MarketCommander implements EconomyTickListener {
         }
 
         if (market.getConstructionQueue() == null) {
-            logger.warn("Market unable to build with queue, " + market.getName());
+            logger.warn("Market unable to build without queue, " + market.getName());
+            return;
+        }
+
+        if (isDisruptedOrDesperate()) {
+            //not ready yet.
             return;
         }
 
@@ -82,10 +88,32 @@ public class MarketCommander implements EconomyTickListener {
         for (Industry industry : market.getIndustries()) {
             boolean blackListed = Industries.POPULATION.equals(industry.getId()) || PopulationWealthy.equals(industry.getId());
             if (!blackListed && industry.isBuilding()) {
-                logger.info("Market " + market.getName() + " building a " + industry.getCurrentName() + ".");
-
                 building = true;
                 break;
+            }
+        }
+        return building;
+    }
+
+    protected boolean isDisruptedOrDesperate() {
+        boolean building = false;
+        OUTER:
+        for (Industry industry : market.getIndustries()) {
+            if (industry.isDisrupted()) {
+                building = true;
+                break;
+            }
+            List<Pair<String, Integer>> allDeficit = industry.getAllDeficit();
+            if (allDeficit != null && !allDeficit.isEmpty()) {
+                for (Pair<String, Integer> pair : allDeficit) {
+                    if (pair != null && pair.two != null && pair.two > 1
+                            && !Commodities.ORGANS.equals(pair.one)
+                            && !Commodities.DRUGS.equals(pair.one)
+                    ) {//not just a minor set back and not illegal goods
+                        building = true;
+                        break OUTER;
+                    }
+                }
             }
         }
         return building;
@@ -128,6 +156,7 @@ public class MarketCommander implements EconomyTickListener {
                 && !market.isPlayerOwned();
 
         if (doStability(constructionQueue, stability, cruel)) return true;
+        if (stability < 3) return false; //unstable and nothing to do about it.
 
         boolean farmers = market.hasIndustry(Industries.FARMING);
         boolean waterFarmers = market.hasIndustry(Industries.AQUACULTURE);
@@ -306,7 +335,7 @@ public class MarketCommander implements EconomyTickListener {
             //vanilla
             if (!heavyIndustry) {
                 queueIfNotPresent(picker, Industries.HEAVYINDUSTRY, 10);
-            }else {
+            } else {
                 queueIfNotPresent(picker, Industries.ORBITALWORKS, 10);
             }
 
