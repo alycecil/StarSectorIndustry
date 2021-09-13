@@ -39,8 +39,6 @@ public abstract class AliceBaseIndustry extends BaseIndustry {
         }
     }
 
-    protected abstract void applyForIndustry(float effectiveness);
-
     @Override
     public void unapply() {
         super.unapply();
@@ -53,8 +51,6 @@ public abstract class AliceBaseIndustry extends BaseIndustry {
 
 
     }
-
-    protected abstract void unapplyForIndustry();
 
     public List<String> getDemanded() {
         List<String> list = new LinkedList<>();
@@ -96,4 +92,8 @@ public abstract class AliceBaseIndustry extends BaseIndustry {
             tooltip.addPara("Currently operating at %s effective load.", 10f, Misc.getHighlightColor(), pct);
         }
     }
+
+    protected abstract void applyForIndustry(float effectiveness);
+
+    protected abstract void unapplyForIndustry();
 }
