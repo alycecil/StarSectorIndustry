@@ -178,9 +178,6 @@ public class MarketCommander implements EconomyTickListener {
                 if (hasSpace) {
                     queueIfNotPresent(picker, PopulationWealthy, 10);
 
-                    if (farmers) {
-                        queueIfNotPresent(picker, AutomatedFarming);
-                    }
                     if (cruel && stability > 6) {
                         queueIfNotPresent(picker, ChopShop);
                     }
@@ -189,7 +186,7 @@ public class MarketCommander implements EconomyTickListener {
                 queueIfNotPresent(picker, SpaceElevator);
                 queueIfNotPresent(picker, GatesCustomsNavy);
                 if (farmers && hasSpace) {
-                    queueIfNotPresent(picker, IndustrialFarming);
+                    queueIfNotPresent(picker, AutomatedFarming);
                 }
             case 7:
                 if (market.hasIndustry(Industries.HEAVYINDUSTRY)) {
@@ -199,14 +196,16 @@ public class MarketCommander implements EconomyTickListener {
                 }
                 queueIfNotPresent(picker, CivilianInfrastructureLuxury);
                 if (farmers && hasSpace) {
-                    queueIfNotPresent(picker, StateFarms);
+                    queueIfNotPresent(picker, IndustrialFarming, 200);
                 }
             case 6:
-
                 queueIfNotPresent(picker, CivilianInfrastructureCommon);
 
                 if (hasSpace) {
-                    if (farmers || waterFarmers && market.hasIndustry(CivilianInfrastructureLuxury)) {
+                    if (farmers) {
+                        queueIfNotPresent(picker, StateFarms, 400);
+                    }
+                    if ((farmers || waterFarmers) && market.hasIndustry(CivilianInfrastructureLuxury)) {
                         //has a lot of nice things already, even if its shrank one.
                         queueIfNotPresent(picker, PopulationWealthy, 5);
                     }
@@ -215,26 +214,23 @@ public class MarketCommander implements EconomyTickListener {
                         queueIfNotPresent(picker, BulkFuelProduction);
                     }
                 }
-            case 5:
+            case 4:
                 queueIfNotPresent(picker, TransportationInfrastructure);
 
                 if (market.hasIndustry(Industries.ORBITALWORKS)) {
                     queueIfNotPresent(picker, IndustrialDefenseForce);
                 }
-            case 4:
                 if (waterFarmers) {
                     queueIfNotPresent(picker, AquacultureExtensions);
                 } else if (!farmers && miners && hasSpace) {
-                    queueIfNotPresent(picker, TraceMining);
+                    queueIfNotPresent(picker, TraceMining, 500);
                 }
-            case 3:
+
                 if (market.hasIndustry(Industries.HIGHCOMMAND)) {
                     if (cruel) {
                         queueIfNotPresent(picker, PoliceState);
                     }
-
                     queueIfNotPresent(picker, GatesCustomsNavy);
-
                     if (hasSpace) {
                         queueIfNotPresent(picker, Industries.FUELPROD);
                     }
@@ -291,12 +287,13 @@ public class MarketCommander implements EconomyTickListener {
         if (notMilitary
         ) {
             queueIfNotPresent(picker, EmergencyDefenseForce);
+            queueIfNotPresent(picker, Industries.PATROLHQ, 10);
         } else {
             if (!heavyIndustry) {
                 queueIfNotPresent(picker, PopulationWealthy, 1);
             }
-            queueIfNotPresent(picker, Industries.PATROLHQ, 10);
-            if(hasSpace) {
+
+            if (hasSpace) {
                 queueIfNotPresent(picker, Industries.MILITARYBASE, 10);
                 queueIfNotPresent(picker, Industries.HIGHCOMMAND, 5);
             }
@@ -305,6 +302,8 @@ public class MarketCommander implements EconomyTickListener {
             //vanilla
             if (!heavyIndustry) {
                 queueIfNotPresent(picker, Industries.HEAVYINDUSTRY, 10);
+            }else {
+                queueIfNotPresent(picker, Industries.ORBITALWORKS, 10);
             }
 
             if (Mods.isIndustrialEvo()) {

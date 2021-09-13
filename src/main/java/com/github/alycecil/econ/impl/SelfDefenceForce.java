@@ -39,7 +39,7 @@ public class SelfDefenceForce extends MilitaryIndustry {
 
     @Override
     protected int getLight() {
-        return Math.min(market.getSize() - 1, 5);
+        return 1;
     }
 
     @Override
