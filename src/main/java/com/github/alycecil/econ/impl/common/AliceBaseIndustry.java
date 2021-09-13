@@ -2,6 +2,8 @@ package com.github.alycecil.econ.impl.common;
 
 import com.fs.starfarer.api.campaign.econ.MarketImmigrationModifier;
 import com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry;
+import com.fs.starfarer.api.ui.TooltipMakerAPI;
+import com.fs.starfarer.api.util.Misc;
 import com.fs.starfarer.api.util.Pair;
 import com.github.alycecil.econ.model.IndustryDemand;
 import com.github.alycecil.econ.model.IndustryEffect;
@@ -83,5 +85,15 @@ public abstract class AliceBaseIndustry extends BaseIndustry {
             }
         }
         return effectiveness;
+    }
+
+    @Override
+    protected void addPostSupplySection(TooltipMakerAPI tooltip, boolean hasSupply, IndustryTooltipMode mode) {
+        super.addPostSupplySection(tooltip, hasSupply, mode);
+
+        if (this instanceof HasEffectiveness) {
+            String pct = "" + (int) (getEffectiveness() * 100f) + "%";
+            tooltip.addPara("Currently operating at %s effective load.", 10f, Misc.getHighlightColor(), pct);
+        }
     }
 }

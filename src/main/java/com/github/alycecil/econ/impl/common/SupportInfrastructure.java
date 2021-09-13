@@ -25,13 +25,4 @@ public abstract class SupportInfrastructure extends AliceBaseIndustry implements
     protected void unapplyForIndustry() {
         market.getAccessibilityMod().unmodifyFlat(id);
     }
-
-
-
-    @Override
-    protected void addPostSupplySection(TooltipMakerAPI tooltip, boolean hasSupply, IndustryTooltipMode mode) {
-        super.addPostSupplySection(tooltip, hasSupply, mode);
-        String pct = "" + (int) (getEffectiveness() * 100f) + "%";
-        tooltip.addPara("Currently operating at %s effective load.", 10f, Misc.getHighlightColor(), pct);
-    }
 }
