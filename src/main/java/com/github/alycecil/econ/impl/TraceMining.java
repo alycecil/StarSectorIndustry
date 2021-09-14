@@ -8,6 +8,7 @@ import com.fs.starfarer.api.impl.campaign.population.PopulationComposition;
 import com.github.alycecil.econ.impl.common.HasEffectiveness;
 import com.github.alycecil.econ.impl.common.PollutingIndustry;
 import com.github.alycecil.econ.model.FlatCommodityBonus;
+import com.github.alycecil.econ.model.FlatCommodityDemand;
 import com.github.alycecil.econ.model.PopulationCommodityDemand;
 
 public class TraceMining extends PollutingIndustry implements HasEffectiveness {
@@ -21,7 +22,7 @@ public class TraceMining extends PollutingIndustry implements HasEffectiveness {
                 new FlatCommodityBonus(Commodities.RARE_ORE, 2, DESC),
                 new FlatCommodityBonus(Commodities.VOLATILES, 2, DESC),
                 new FlatCommodityBonus(Commodities.ORE, 1, DESC),
-                new PopulationCommodityDemand(Commodities.HEAVY_MACHINERY, 7, DESC)
+                new FlatCommodityDemand(Commodities.HEAVY_MACHINERY, 2, DESC)
         );
     }
 

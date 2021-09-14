@@ -12,7 +12,7 @@ public class SpaceElevator extends SupportInfraGrowsPopulation implements Market
 
     public SpaceElevator() {
         super(0.5f,
-                new PopulationCommodityDemand(Commodities.HEAVY_MACHINERY, -DEMAND, SPACE_ELEVATOR),
+                new PopulationCommodityDemand(Commodities.HEAVY_MACHINERY, -2, SPACE_ELEVATOR),
                 new PopulationCommodityDemand(Commodities.MARINES, DEMAND, SPACE_ELEVATOR)
         );
     }
