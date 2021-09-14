@@ -1,5 +1,6 @@
 package com.github.alycecil.econ.impl.common;
 
+import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.econ.MarketImmigrationModifier;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.github.alycecil.econ.model.IndustryEffect;
@@ -25,6 +26,8 @@ public abstract class PopulationAwareExtension extends IndustryExtension impleme
     protected void addPostSupplySection(TooltipMakerAPI tooltip, boolean hasSupply, IndustryTooltipMode mode) {
         super.addPostSupplySection(tooltip, hasSupply, mode);
 
-        tooltip.addPara("Census:\n"+market.getPopulation().toString(), Color.lightGray, 10f);
+        if (Global.getSettings().getBoolean("alice_market_census")) {
+            tooltip.addPara("Census:\n" + market.getPopulation().toString(), Color.lightGray, 10f);
+        }
     }
 }

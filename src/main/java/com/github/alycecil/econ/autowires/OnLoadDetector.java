@@ -42,8 +42,10 @@ public class OnLoadDetector extends BaseModPlugin implements PlayerColonizationL
     }
 
     protected static void addMarketCommanders() {
-        for (MarketAPI marketAPI : Global.getSector().getEconomy().getMarketsCopy()) {
-            addMarketCommander(marketAPI);
+        if(Global.getSettings().getBoolean("alice_marketcommander")) {
+            for (MarketAPI marketAPI : Global.getSector().getEconomy().getMarketsCopy()) {
+                addMarketCommander(marketAPI);
+            }
         }
     }
 
